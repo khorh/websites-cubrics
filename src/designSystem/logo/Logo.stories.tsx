@@ -1,17 +1,9 @@
-import { ComponentStory } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 import Logo from "./Logo";
 
-export default {
-  title: "Components/Logos",
+const meta: Meta<typeof Logo> = {
+  title: "Logos",
   component: Logo,
 };
 
-const Template: ComponentStory<typeof Logo> = () => {
-  return (
-    <>
-      <Logo />
-    </>
-  );
-};
-
-export const Logos = Template.bind({});
+export default meta;
