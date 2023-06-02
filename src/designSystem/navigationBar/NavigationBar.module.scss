@@ -1,3 +1,11 @@
 .navigationBar {
   margin: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigationLinks {
+  display: flex;
+  gap: 48px;
 }
