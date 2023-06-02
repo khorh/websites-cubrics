@@ -1,0 +1,36 @@
+// Layout > Grids
+
+// Phone
+@mixin grid-xxs {
+  display: grid;
+  grid-template-columns: 0 repeat(4, 1fr) 0;
+  column-gap: 16px;
+}
+
+// Tablet
+@mixin grid-xs {
+  display: grid;
+  grid-template-columns: 16px repeat(8, 1fr) 16px;
+  column-gap: 16px;
+}
+
+// Large tablet
+@mixin grid-s {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, 56px) 1fr;
+  column-gap: 16px;
+}
+
+// Laptop
+@mixin grid-m {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, 64px) 1fr;
+  column-gap: 16px;
+}
+
+// Desktop
+@mixin grid-l {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, 72px) 1fr;
+  column-gap: 16px;
+}
