@@ -1,6 +1,6 @@
 import { FC } from "react";
 import "./App.css";
-import Logo from "./components/logo/Logo";
+import Logo from "./designSystem/logo/Logo";
 
 const App: FC = () => {
   return (
