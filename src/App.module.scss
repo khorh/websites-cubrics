@@ -1,0 +1,19 @@
+@import "./designSystem/styles/main.scss";
+
+.page {
+  @include breakpoint-xxs {
+    @include grid-xxs;
+  }
+  @include breakpoint-xs {
+    @include grid-xs;
+  }
+  @include breakpoint-s {
+    @include grid-s;
+  }
+  @include breakpoint-m {
+    @include grid-m;
+  }
+  @include breakpoint-l {
+    @include grid-l;
+  }
+}
