@@ -28,10 +28,11 @@ const NavigationBar: FC = () => {
     <nav className={styles.container}>
       <Logo />
       <div className={styles.links__container}>
-        <div className={styles.links}>{displayNavigationLinks}</div>
+        <div className={styles.links__horizontal}>{displayNavigationLinks}</div>
       </div>
       <div className={styles.menuIcon__container}>
         <Icon />
+        <div className={styles.links__vertical}>{displayNavigationLinks}</div>
       </div>
     </nav>
   );
