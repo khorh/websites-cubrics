@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "./NavigationBar.module.scss";
 import Icon from "../icon/Icon";
 import Logo from "../logo/Logo";
@@ -20,9 +20,23 @@ const NavigationBar: FC = () => {
     },
   ];
 
-  const displayNavigationLinks = navigationLinks.map((link) => {
-    return <NavigationLink name={link.name} destination={link.destination} />;
+  // method to display navigation links
+  const displayNavigationLinks = navigationLinks.map((link, key) => {
+    return (
+      <NavigationLink
+        key={link.name}
+        name={link.name}
+        destination={link.destination}
+      />
+    );
   });
+
+  // method to toggle vertical navigation links
+  const [verticalLinks, setVerticalLinks] = useState<boolean>(false);
+
+  const toggleVerticalLinks = () => {
+    return setVerticalLinks(!verticalLinks);
+  };
 
   return (
     <nav className={styles.container}>
@@ -31,8 +45,12 @@ const NavigationBar: FC = () => {
         <div className={styles.links__horizontal}>{displayNavigationLinks}</div>
       </div>
       <div className={styles.menuIcon__container}>
-        <Icon />
-        <div className={styles.links__vertical}>{displayNavigationLinks}</div>
+        <div onClick={toggleVerticalLinks}>
+          <Icon />
+        </div>
+        {verticalLinks && (
+          <div className={styles.links__vertical}>{displayNavigationLinks}</div>
+        )}
       </div>
     </nav>
   );
