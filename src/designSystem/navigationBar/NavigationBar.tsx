@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styles from "./NavigationBar.module.scss";
+import Icon from "../icon/Icon";
 import Logo from "../logo/Logo";
 import NavigationLink from "../navigationLink/NavigationLink";
 
@@ -24,9 +25,14 @@ const NavigationBar: FC = () => {
   });
 
   return (
-    <nav className={styles.navigationBar}>
+    <nav className={styles.container}>
       <Logo />
-      <div className={styles.navigationLinks}>{displayNavigationLinks}</div>
+      <div className={styles.links__container}>
+        <div className={styles.links}>{displayNavigationLinks}</div>
+      </div>
+      <div className={styles.menuIcon__container}>
+        <Icon />
+      </div>
     </nav>
   );
 };

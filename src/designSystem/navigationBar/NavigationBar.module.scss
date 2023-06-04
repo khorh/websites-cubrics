@@ -1,4 +1,6 @@
-.navigationBar {
+@import "../styles/main.scss";
+
+.container {
   grid-column: 2 / -2;
   margin: 24px 0;
   display: flex;
@@ -6,7 +8,20 @@
   align-items: center;
 }
 
-.navigationLinks {
+.links__container {
+  display: none;
+  @include breakpoint-xs {
+    display: block;
+  }
+}
+
+.links {
   display: flex;
   gap: 32px;
+}
+
+.menuIcon__container {
+  @include breakpoint-xs {
+    display: none;
+  }
 }
