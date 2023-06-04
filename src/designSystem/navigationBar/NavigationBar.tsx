@@ -21,7 +21,7 @@ const NavigationBar: FC = () => {
   ];
 
   // method to display navigation links
-  const displayNavigationLinks = navigationLinks.map((link, key) => {
+  const displayNavigationLinks = navigationLinks.map((link) => {
     return (
       <NavigationLink
         key={link.name}
