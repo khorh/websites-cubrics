@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Logo from "./Logo";
 
 describe("logo", () => {
-  test("should display the cubrics logo", () => {
+  test("should render the cubrics logo", () => {
     render(<Logo />);
     const logoElement = screen.getByRole("img") as HTMLImageElement;
     expect(logoElement.tagName).toBe("IMG");
