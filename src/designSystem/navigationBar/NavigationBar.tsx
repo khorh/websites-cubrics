@@ -42,17 +42,27 @@ const NavigationBar: FC = () => {
     <nav className={styles.container}>
       <Logo />
       <div
-        className={styles.menuIcon__container}
+        className={styles.links__vertical__container}
         onClick={toggleVerticalLinks}
-        role={"button"}
-        aria-label="menu icon"
+        role="button"
+        aria-label="vertical links container"
       >
         <Icon />
         {verticalLinks && (
-          <div className={styles.links__vertical}>{displayNavigationLinks}</div>
+          <div
+            className={styles.links__vertical}
+            role="menubar"
+            aria-label="vertical links"
+          >
+            {displayNavigationLinks}
+          </div>
         )}
       </div>
-      <div className={styles.links__container}>
+      <div
+        className={styles.links__horizontal__container}
+        role="menubar"
+        aria-label="horizontal links"
+      >
         <div className={styles.links__horizontal}>{displayNavigationLinks}</div>
       </div>
     </nav>

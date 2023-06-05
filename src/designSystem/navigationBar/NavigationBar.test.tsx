@@ -16,25 +16,37 @@ describe("navigation bar", () => {
 });
 
 describe("navigation bar with the menu icon", () => {
+  test("should render a menu icon container", () => {
+    render(<NavigationBar />);
+    const verticalLinksElement = screen.getByLabelText(
+      "vertical links container"
+    );
+    expect(verticalLinksElement).toHaveClass("links__vertical__container");
+  });
   test("should render a menu icon in the navigation bar", () => {
     render(<NavigationBar />);
-    const menuIconElement = screen.getByAltText("menu icon");
-    expect(menuIconElement).toBeInTheDocument;
+    const verticalLinksElement = screen.getByAltText("menu icon");
+    expect(verticalLinksElement).toBeInTheDocument;
   });
   test("should render navigation links when menu icon is clicked", () => {
     render(<NavigationBar />);
-    const menuIconElement = screen.getByRole("button");
-    fireEvent.click(menuIconElement);
-    expect(menuIconElement.textContent).toBe("ServicesIndustriesAbout");
-    fireEvent.click(menuIconElement);
-    expect(menuIconElement.textContent).toBe("");
+    const verticalLinksElement = screen.getByLabelText(
+      "vertical links container"
+    );
+    fireEvent.click(verticalLinksElement);
+    const verticalLinksElement2 = screen.getByLabelText("vertical links");
+    expect(verticalLinksElement2).toHaveClass("links__vertical");
+    expect(verticalLinksElement2.textContent).toBe("ServicesIndustriesAbout");
+    fireEvent.click(verticalLinksElement);
+    expect(verticalLinksElement.textContent).toBe("");
   });
 });
 
 describe("navigation bar with the links", () => {
   test("should render navigation links", () => {
     render(<NavigationBar />);
-    const navigationLinksElement = screen.getByRole("navigation");
+    const navigationLinksElement = screen.getByLabelText("horizontal links");
+    expect(navigationLinksElement).toHaveClass("links__horizontal__container");
     expect(navigationLinksElement.textContent).toBe("ServicesIndustriesAbout");
   });
 });

@@ -8,17 +8,10 @@
   align-items: center;
 }
 
-.links__container {
-  margin-left: 24px;
-  display: none;
+.links__vertical__container {
   @include breakpoint-xs {
-    display: block;
+    display: none;
   }
-}
-
-.links__horizontal {
-  display: flex;
-  gap: 32px;
 }
 
 .links__vertical {
@@ -32,8 +25,15 @@
   gap: 16px;
 }
 
-.menuIcon__container {
+.links__horizontal__container {
+  margin-left: 24px;
+  display: none;
   @include breakpoint-xs {
-    display: none;
+    display: block;
   }
+}
+
+.links__horizontal {
+  display: flex;
+  gap: 32px;
 }
