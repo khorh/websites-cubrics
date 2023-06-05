@@ -8,15 +8,15 @@ const NavigationBar: FC = () => {
   const navigationLinks = [
     {
       name: "Services",
-      destination: "",
+      destination: "#services",
     },
     {
       name: "Industries",
-      destination: "",
+      destination: "#industries",
     },
     {
       name: "About",
-      destination: "",
+      destination: "#about",
     },
   ];
 
@@ -45,6 +45,7 @@ const NavigationBar: FC = () => {
         className={styles.menuIcon__container}
         onClick={toggleVerticalLinks}
         role={"button"}
+        aria-label="menu icon"
       >
         <Icon />
         {verticalLinks && (
