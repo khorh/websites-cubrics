@@ -1,10 +1,12 @@
 import { FC } from "react";
-import "./App.css";
-import Logo from "./designSystem/logo/Logo";
+import styles from "./App.module.scss";
+import NavigationBar from "./designSystem/navigationBar/NavigationBar";
 
 const App: FC = () => {
   return (
-    <><Logo /></>
+    <div className={styles.page}>
+      <NavigationBar />
+    </div>
   );
 };
 

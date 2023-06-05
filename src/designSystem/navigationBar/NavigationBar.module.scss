@@ -1,0 +1,39 @@
+@import "../styles/main.scss";
+
+.container {
+  grid-column: 2 / -2;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links__vertical__container {
+  @include breakpoint-xs {
+    display: none;
+  }
+}
+
+.links__vertical {
+  position: fixed;
+  top: 112px;
+  right: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 0 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.links__horizontal__container {
+  margin-left: 24px;
+  display: none;
+  @include breakpoint-xs {
+    display: block;
+  }
+}
+
+.links__horizontal {
+  display: flex;
+  gap: 32px;
+}

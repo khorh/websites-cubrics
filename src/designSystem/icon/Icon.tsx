@@ -1,5 +1,5 @@
 import { FC } from "react";
-import LogoCubrics from "./logo-cubrics.svg";
+import Menu from "./list.svg";
 
 /* 
   Web accessibility
@@ -8,11 +8,11 @@ import LogoCubrics from "./logo-cubrics.svg";
   - For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/img_role.
 
   Unit testing
-  - The unique alt attribute is to be used to determine if the logo is present in other components e.g. navigation bar.
+  - The unique alt attribute is to be used to determine if the icon is present in other components e.g. navigation bar.
 */
 
-const Logo: FC = () => {
-  return <img src={LogoCubrics} alt="cubrics logo" />;
+const Icon: FC = () => {
+  return <img src={Menu} alt="menu icon" />;
 };
 
-export default Logo;
+export default Icon;
