@@ -8,7 +8,7 @@ interface INavigationLink extends React.HTMLAttributes<HTMLAnchorElement> {
 
 const NavigationLink: FC<INavigationLink> = (props) => {
   return (
-    <a className={styles.navigationLink} href={props.destination}>
+    <a className={styles.common} href={props.destination}>
       {props.name}
     </a>
   );
