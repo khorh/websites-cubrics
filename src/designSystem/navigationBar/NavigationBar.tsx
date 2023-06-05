@@ -11,7 +11,7 @@ const NavigationBar: FC = () => {
       destination: "",
     },
     {
-      name: "Clients",
+      name: "Industries",
       destination: "",
     },
     {
@@ -41,16 +41,18 @@ const NavigationBar: FC = () => {
   return (
     <nav className={styles.container}>
       <Logo />
-      <div className={styles.links__container}>
-        <div className={styles.links__horizontal}>{displayNavigationLinks}</div>
-      </div>
-      <div className={styles.menuIcon__container}>
-        <div onClick={toggleVerticalLinks}>
-          <Icon />
-        </div>
+      <div
+        className={styles.menuIcon__container}
+        onClick={toggleVerticalLinks}
+        role={"button"}
+      >
+        <Icon />
         {verticalLinks && (
           <div className={styles.links__vertical}>{displayNavigationLinks}</div>
         )}
+      </div>
+      <div className={styles.links__container}>
+        <div className={styles.links__horizontal}>{displayNavigationLinks}</div>
       </div>
     </nav>
   );
