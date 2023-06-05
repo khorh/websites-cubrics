@@ -9,6 +9,7 @@
 }
 
 .links__container {
+  margin-left: 24px;
   display: none;
   @include breakpoint-xs {
     display: block;
