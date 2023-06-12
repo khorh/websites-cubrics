@@ -1,0 +1,18 @@
+@import "../../designSystem/styles/main.scss";
+
+.common {
+  grid-column: 2 / -2;
+  padding: 48px 0 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+
+  @include breakpoint-xs {
+    grid-column: 3 / -3;
+  }
+  @include breakpoint-s {
+    grid-column: 4 / -4;
+  }
+}
