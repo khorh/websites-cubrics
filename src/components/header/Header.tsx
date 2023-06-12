@@ -7,8 +7,8 @@ import Text from "../../designSystem/text/Text";
 const Header: FC = () => {
   return (
     <header className={styles.background}>
-      <div className={styles.content}>
-        <div className={styles.titles}>
+      <div className={styles.content} role="contentinfo">
+        <div className={styles.titles} role="textbox">
           <Heading type={"h1"} colour={"base__light"}>
             Accelerating digital transformation
           </Heading>
