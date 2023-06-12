@@ -1,6 +1,15 @@
 import { FC } from "react";
 import styles from "./Heading.module.scss";
 
+/* 
+  Web accessibility
+  - Role is not required as the <h1>, <h2> and <h3> tags infers the role as headings.
+  - For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role.
+
+  Unit testing
+  - To access the <h1>, <h2> and <h3> tags, use the role (getByRole).
+*/
+
 interface IHeading extends React.HTMLAttributes<HTMLHeadingElement> {
   type: "h1" | "h2" | "h3";
   colour?: "base__dark" | "primary__dark" | "base__light";

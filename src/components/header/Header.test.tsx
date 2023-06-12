@@ -10,13 +10,13 @@ describe("header", () => {
   });
   test("shoulder render the header's content", () => {
     render(<Header />);
-    const headerComponent = screen.getByRole("contentinfo");
+    const headerComponent = screen.getByLabelText("header content");
     expect(headerComponent.tagName).toBe("DIV");
     expect(headerComponent).toHaveClass("content");
   });
   test("shoulder render the header's titles", () => {
     render(<Header />);
-    const headerComponent = screen.getByRole("textbox");
+    const headerComponent = screen.getByLabelText("header titles");
     expect(headerComponent.tagName).toBe("DIV");
     expect(headerComponent).toHaveClass("titles");
     expect(headerComponent.textContent).toBe(
