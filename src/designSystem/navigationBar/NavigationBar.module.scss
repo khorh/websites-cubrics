@@ -1,4 +1,4 @@
-@import "../styles/main.scss";
+@import "../../designSystem/styles/main.scss";
 
 .container {
   grid-column: 2 / -2;
@@ -9,7 +9,7 @@
 }
 
 .links__vertical__container {
-  @include breakpoint-xs {
+  @include breakpoint-s {
     display: none;
   }
 }
@@ -19,6 +19,7 @@
   top: 112px;
   right: 0;
   border-radius: 0 0 8px 8px;
+  background-color: $colour-base-light;
   padding: 0 24px 24px 24px;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@
 .links__horizontal__container {
   margin-left: 24px;
   display: none;
-  @include breakpoint-xs {
+  @include breakpoint-s {
     display: block;
   }
 }

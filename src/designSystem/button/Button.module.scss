@@ -1,0 +1,26 @@
+@import "../../designSystem/styles/main.scss";
+
+.common {
+  margin: 0;
+  border-radius: 8px;
+  border: 4px solid $colour-secondary-main;
+  background-color: $colour-secondary-main;
+  padding: 4px 16px;
+  width: fit-content;
+  font-family: $font-family-secondary;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 100%;
+  &:hover {
+    border: 4px solid $colour-secondary-light;
+    background-color: $colour-secondary-light;
+  }
+  &:focus {
+    border: 4px solid $colour-secondary-dark;
+    background-color: $colour-secondary-light;
+  }
+  &:active {
+    border: 4px solid $colour-secondary-dark;
+    background-color: $colour-secondary-dark;
+  }
+}

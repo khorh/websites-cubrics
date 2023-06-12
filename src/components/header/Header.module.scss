@@ -1,0 +1,37 @@
+@import "../../designSystem/styles/main.scss";
+
+.background {
+  grid-column: 1 / -1;
+  padding: 48px 0 64px;
+  background-image: url("./world.jpg");
+  background-size: cover;
+  background-position: center;
+  @include breakpoint-xxs {
+    @include grid-xxs;
+  }
+  @include breakpoint-xs {
+    @include grid-xs;
+  }
+  @include breakpoint-s {
+    @include grid-s;
+  }
+  @include breakpoint-m {
+    @include grid-m;
+  }
+  @include breakpoint-l {
+    @include grid-l;
+  }
+}
+
+.content {
+  grid-column: 2/-2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
