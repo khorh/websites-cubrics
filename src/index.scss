@@ -1,6 +1,9 @@
+@import "./designSystem/styles/main.scss";
+
 body {
   margin: 0;
   font-family: "Prompt", sans-serif;
+  color: $colour-base-dark;
 }
 
 * {

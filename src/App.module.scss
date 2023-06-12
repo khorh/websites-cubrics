@@ -1,6 +1,9 @@
 @import "./designSystem/styles/main.scss";
 
 .page {
+  display: flex;
+  flex-direction: column;
+
   @include breakpoint-xxs {
     @include grid-xxs;
   }

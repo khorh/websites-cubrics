@@ -10,10 +10,10 @@ import NavigationLink from "../navigationLink/NavigationLink";
   - Aria label is not required as there is only one navigation bar.
   - For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role.
 
-  - Roles and aria labels are required for <div> tags since it can be used for different purposes.
+  - Roles are not added to <div> tags since it can be used for different purposes. Instead unique aria labels have been added.
 
   Unit testing
-  - The unique aria label can be used to determine if the containers are present in other components e.g. navigation bar.
+  - The unique aria label can be used to determine if the different containers are present.
   - For more information on button, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role.
   - For more information on menubar, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role.
 */

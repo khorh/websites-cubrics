@@ -6,7 +6,7 @@ describe("navigation link", () => {
     render(<NavigationLink name={"Link"} destination={"#link"} />);
     const navigationLinkElement = screen.getByRole("link");
     expect(navigationLinkElement.tagName).toBe("A");
-    expect(navigationLinkElement).toHaveClass("common");
+    expect(navigationLinkElement).toHaveClass("common", { exact: true });
     expect(navigationLinkElement.textContent).toBe("Link");
     expect(navigationLinkElement).toHaveAttribute("href", "#link");
   });
