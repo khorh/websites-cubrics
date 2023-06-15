@@ -15,7 +15,7 @@ const CardServiceGroup: FC<ICardServiceGroup> = (props) => {
   const displayServicesData = props.data.map((service) => {
     return <CardService data={service} key={service.service_name} />;
   });
-  return <div className={styles.services}>{displayServicesData}</div>;
+  return <div className={styles.common}>{displayServicesData}</div>;
 };
 
 export default CardServiceGroup;
