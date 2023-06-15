@@ -1,0 +1,18 @@
+@import "../../styles/main.scss";
+
+.first {
+  border-radius: 8px 8px 0 0;
+  background-color: $colour-base-dark;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.second {
+  border-radius: 0 0 8px 8px;
+  background-color: $colour-base-light;
+  padding: 24px;
+}
