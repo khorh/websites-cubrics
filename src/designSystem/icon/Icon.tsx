@@ -1,6 +1,5 @@
 import { FC } from "react";
-import Menu from "./list.svg";
-
+import Menu from "./iconImages/list.svg";
 /* 
   Web accessibility
   - Role is not required as the <img /> tag infers the role.
