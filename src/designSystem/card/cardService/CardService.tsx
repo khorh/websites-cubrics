@@ -14,7 +14,7 @@ interface ICardService {
 
 const CardService: FC<ICardService> = (props) => {
   return (
-    <article>
+    <article className={styles.common}>
       <div className={styles.first}>
         <Heading type={"h3"} colour={"base__light"}>
           {props.data.service_name}
