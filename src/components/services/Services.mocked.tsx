@@ -1,4 +1,11 @@
-export const serviceMockedData = [
+interface IServiceMockedData {
+  service_icon: string;
+  service_name: string;
+  service_intro: string;
+  service_description: string;
+}
+
+export const serviceMockedData: IServiceMockedData[] = [
   {
     service_icon: "file post",
     service_name: "Project Management",

@@ -4,7 +4,7 @@ import Heading from "../../heading/Heading";
 import Icon from "../../icon/Icon";
 import Text from "../../text/Text";
 
-interface ICardService {
+export interface ICardService extends React.HTMLAttributes<HTMLDivElement> {
   data: {
     service_icon: string;
     service_name: string;
@@ -15,7 +15,7 @@ interface ICardService {
 
 const CardService: FC<ICardService> = (props) => {
   return (
-    <article className={styles.common}>
+    <div className={styles.common}>
       <div className={styles.firstContainer}>
         <div className={styles.firstContainer__iconTitle}>
           <Icon name={props.data.service_icon} />
@@ -30,7 +30,7 @@ const CardService: FC<ICardService> = (props) => {
       <div className={styles.secondContainer}>
         <Text type={"p2"}>{props.data.service_description}</Text>
       </div>
-    </article>
+    </div>
   );
 };
 
