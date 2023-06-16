@@ -7,7 +7,7 @@
   }
 }
 
-.first {
+.firstContainer {
   border-radius: 8px 8px 0 0;
   background-color: $colour-base-dark;
   padding: 24px;
@@ -23,7 +23,11 @@
   }
 }
 
-.second {
+.firstContainer__iconTitle {
+  text-align: center;
+}
+
+.secondContainer {
   border-radius: 0 0 8px 8px;
   background-color: $colour-base-light;
   padding: 24px;

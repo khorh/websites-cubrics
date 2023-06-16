@@ -15,15 +15,17 @@ interface ICardService {
 const CardService: FC<ICardService> = (props) => {
   return (
     <article className={styles.common}>
-      <div className={styles.first}>
-        <Heading type={"h3"} colour={"base__light"}>
-          {props.data.service_name}
-        </Heading>
+      <div className={styles.firstContainer}>
+        <div className={styles.firstContainer__iconTitle}>
+          <Heading type={"h2"} colour={"base__light"}>
+            {props.data.service_name}
+          </Heading>
+        </div>
         <Text type={"p2"} colour={"base__light"}>
           {props.data.service_intro}
         </Text>
       </div>
-      <div className={styles.second}>
+      <div className={styles.secondContainer}>
         <Text type={"p2"}>{props.data.service_description}</Text>
       </div>
     </article>
