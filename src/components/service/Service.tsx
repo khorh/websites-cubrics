@@ -6,10 +6,10 @@ import { serviceMockedData } from "./Service.mocked";
 
 const Service: FC = () => {
   return (
-    <section className={styles.common}>
+    <section id={"services"} className={styles.common}>
       <article className={styles.title}>
         <Heading type={"h2"} colour={"primary__dark"}>
-          SERVICE
+          SERVICES
         </Heading>
       </article>
       <article className={styles.services}>
