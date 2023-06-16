@@ -24,7 +24,7 @@ const Header: FC = () => {
           <Heading type={"h1"} colour={"base__light"}>
             Accelerating digital transformation
           </Heading>
-          <Text type={"p2"} colour={"base__light"}>
+          <Text type={"p1"} colour={"base__light"}>
             Driving success for global brand leaders
           </Text>
         </div>
