@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import styles from "./NavigationBar.module.scss";
-import Icon from "../icon/Icon";
-import Logo from "../logo/Logo";
-import NavigationLink from "../navigationLink/NavigationLink";
+import Icon from "../../designSystem/icon/Icon";
+import Logo from "../../designSystem/logo/Logo";
+import NavigationLink from "../../designSystem/navigationLink/NavigationLink";
 
 /* 
   Web accessibility
@@ -61,7 +61,7 @@ const NavigationBar: FC = () => {
         role="button"
         aria-label="vertical links container"
       >
-        <Icon />
+        <Icon name={"menu"} />
         {verticalLinks && (
           <div
             className={styles.links__vertical}

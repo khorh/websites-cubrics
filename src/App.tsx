@@ -1,16 +1,18 @@
 import { FC } from "react";
 import styles from "./App.module.scss";
-import NavigationBar from "./designSystem/navigationBar/NavigationBar";
+import NavigationBar from "./components/navigationBar/NavigationBar";
 import Header from "./components/header/Header";
 import Purpose from "./components/purpose/Purpose";
+import Services from "./components/services/Services";
 
 const App: FC = () => {
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
       <NavigationBar />
       <Header />
       <Purpose />
-    </div>
+      <Services />
+    </main>
   );
 };
 

@@ -1,0 +1,41 @@
+@import "../../styles/main.scss";
+
+.common {
+  @include breakpoint-xs {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.firstContainer {
+  border-radius: 8px 8px 0 0;
+  background-color: $colour-base-dark;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  @include breakpoint-xs {
+    border-radius: 8px 0 0 8px;
+    width: 50%;
+  }
+}
+
+.firstContainer__iconTitle {
+  text-align: center;
+}
+
+.secondContainer {
+  border-radius: 0 0 8px 8px;
+  background-color: $colour-base-light;
+  padding: 24px;
+
+  @include breakpoint-xs {
+    border-radius: 0 8px 8px 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,6 +1,5 @@
 import { FC } from "react";
-import Menu from "./list.svg";
-
+import { iconMockedImages } from "./Icon.mocked";
 /* 
   Web accessibility
   - Role is not required as the <img /> tag infers the role.
@@ -11,8 +10,20 @@ import Menu from "./list.svg";
   - The unique alt attribute is to be used to determine if the icon is present in other components e.g. navigation bar.
 */
 
-const Icon: FC = () => {
-  return <img src={Menu} alt="menu icon" />;
+interface IIcon extends React.HTMLAttributes<HTMLImageElement> {
+  name: string;
+}
+
+const Icon: FC<IIcon> = (props) => {
+  const filterIcons = iconMockedImages.filter(
+    (icon) => icon.icon_name == props.name
+  );
+
+  const displayIcon = filterIcons.map((icon) => {
+    return <img src={icon.icon_url} alt={icon.icon_alt} key={icon.icon_name} />;
+  });
+
+  return <>{displayIcon}</>;
 };
 
 export default Icon;
