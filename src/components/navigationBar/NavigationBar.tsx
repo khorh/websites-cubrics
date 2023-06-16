@@ -61,7 +61,7 @@ const NavigationBar: FC = () => {
         role="button"
         aria-label="vertical links container"
       >
-        <Icon />
+        <Icon name={"menu"} />
         {verticalLinks && (
           <div
             className={styles.links__vertical}

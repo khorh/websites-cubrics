@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./CardService.module.scss";
 import Heading from "../../heading/Heading";
+import Icon from "../../icon/Icon";
 import Text from "../../text/Text";
 
 interface ICardService {
@@ -17,6 +18,7 @@ const CardService: FC<ICardService> = (props) => {
     <article className={styles.common}>
       <div className={styles.firstContainer}>
         <div className={styles.firstContainer__iconTitle}>
+          <Icon name={props.data.service_icon} />
           <Heading type={"h2"} colour={"base__light"}>
             {props.data.service_name}
           </Heading>
