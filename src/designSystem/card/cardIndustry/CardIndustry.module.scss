@@ -1,10 +1,15 @@
 @import "../../styles/main.scss";
 
+.common {
+  grid-column: 2 / -2;
+  width: 100%;
+}
+
 .image {
   font-size: 0;
   & > img {
-    border-radius: 8px 8px 0 0;
     width: 100%;
+    border-radius: 8px 8px 0 0;
     height: 192px;
     object-fit: cover;
   }

@@ -11,22 +11,22 @@ interface IIndustriesMockedData {
 
 export const industriesMockedData: IIndustriesMockedData[] = [
   {
-    industries_name: "consumer",
+    industries_name: "Consumer",
     industries_image: Consumer,
     industries_alt: "person walking with bag",
   },
   {
-    industries_name: "energy",
+    industries_name: "Energy",
     industries_image: Energy,
     industries_alt: "yellow lightbulb",
   },
   {
-    industries_name: "healthcare",
+    industries_name: "Healthcare",
     industries_image: Healthcare,
     industries_alt: "bottle with tablets pouring out",
   },
   {
-    industries_name: "telecoms",
+    industries_name: "Telecoms",
     industries_image: Telecoms,
     industries_alt: "telecoms mast",
   },
