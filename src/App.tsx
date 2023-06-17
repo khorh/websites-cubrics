@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styles from "./App.module.scss";
+import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import NavigationBar from "./components/navigationBar/NavigationBar";
@@ -15,6 +16,7 @@ const App: FC = () => {
       <Purpose />
       <Services />
       <Industries />
+      <About />
       <Footer />
     </main>
   );
