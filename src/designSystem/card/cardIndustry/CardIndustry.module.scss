@@ -3,6 +3,12 @@
 .common {
   grid-column: 2 / -2;
   width: 100%;
+  @include breakpoint-xs {
+    width: calc(50% - 8px);
+  }
+  @include breakpoint-s {
+    width: calc(25% - 12px);
+  }
 }
 
 .image {

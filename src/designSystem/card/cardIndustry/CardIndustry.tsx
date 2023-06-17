@@ -1,7 +1,6 @@
 import { FC } from "react";
 import styles from "./CardIndustry.module.scss";
 import Heading from "../../heading/Heading";
-import Consumer from "../../../components/industries/industriesImages/consumer.jpg";
 
 interface ICardIndustry extends React.HTMLAttributes<HTMLDivElement> {
   data: {
