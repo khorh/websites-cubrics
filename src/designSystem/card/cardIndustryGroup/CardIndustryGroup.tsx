@@ -12,7 +12,7 @@ interface ICardIndustryGroup extends React.HTMLAttributes<HTMLDivElement> {
 
 const CardIndustryGroup: FC<ICardIndustryGroup> = (props) => {
   const displayIndustriesData = props.data.map((industry) => {
-    return <CardIndustry data={industry} />;
+    return <CardIndustry data={industry} key={industry.industries_name} />;
   });
 
   return (
