@@ -15,7 +15,7 @@ export interface ICardService extends React.HTMLAttributes<HTMLDivElement> {
 
 const CardService: FC<ICardService> = (props) => {
   return (
-    <div className={styles.common}>
+    <div className={styles.common} aria-label={"card"}>
       <div className={styles.firstContainer}>
         <div className={styles.firstContainer__iconTitle}>
           <Icon name={props.data.service_icon} />
