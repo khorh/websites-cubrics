@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import NavigationBar from "./components/navigationBar/NavigationBar";
 import Purpose from "./components/purpose/Purpose";
 import Services from "./components/services/Services";
+import Industries from "./components/industries/Industries";
 
 const App: FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: FC = () => {
       <Header />
       <Purpose />
       <Services />
+      <Industries />
       <Footer />
     </main>
   );

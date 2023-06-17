@@ -16,7 +16,7 @@ interface IIcon extends React.HTMLAttributes<HTMLImageElement> {
 
 const Icon: FC<IIcon> = (props) => {
   const filterIcons = iconMockedImages.filter(
-    (icon) => icon.icon_name == props.name
+    (icon) => icon.icon_name === props.name
   );
 
   const displayIcon = filterIcons.map((icon) => {

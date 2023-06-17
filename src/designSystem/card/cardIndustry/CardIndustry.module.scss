@@ -1,0 +1,30 @@
+@import "../../styles/main.scss";
+
+.common {
+  grid-column: 2 / -2;
+  width: 100%;
+  @include breakpoint-xs {
+    width: calc(50% - 8px);
+  }
+  @include breakpoint-s {
+    width: calc(25% - 12px);
+  }
+}
+
+.image {
+  font-size: 0;
+  & > img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height: 192px;
+    object-fit: cover;
+  }
+}
+
+.title {
+  border-radius: 0 0 8px 8px;
+  background-color: $colour-base-dark;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,11 @@
+.common {
+  grid-column: 2 / -2;
+  padding: 48px 0 64px;
+}
+
+.title {
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

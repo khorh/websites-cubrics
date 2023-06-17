@@ -3,7 +3,13 @@ import Hurricane from "./iconImages/hurricane.svg";
 import Menu from "./iconImages/list.svg";
 import People from "./iconImages/people.svg";
 
-export const iconMockedImages = [
+interface IIconMockedImages {
+  icon_name: string;
+  icon_url: string;
+  icon_alt: string;
+}
+
+export const iconMockedImages: IIconMockedImages[] = [
   {
     icon_name: "file post",
     icon_url: FilePost,
