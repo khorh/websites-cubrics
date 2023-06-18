@@ -16,9 +16,9 @@ const CardIndustryGroup: FC<ICardIndustryGroup> = (props) => {
   });
 
   return (
-    <div className={styles.common} aria-label={"group"}>
+    <article className={styles.common} aria-label={"group"}>
       {displayIndustriesData}
-    </div>
+    </article>
   );
 };
 

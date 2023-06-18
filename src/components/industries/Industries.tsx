@@ -6,14 +6,14 @@ import { industriesMockedData } from "./Industries.mocked";
 
 const Industries: FC = () => {
   return (
-    <div className={styles.common} aria-label="industries">
-      <div className={styles.title} aria-label="title">
+    <section id={"industries"} className={styles.common} aria-label="industries">
+      <article className={styles.title} aria-label="title">
         <Heading type={"h2"} colour={"primary__dark"}>
           INDUSTRIES
         </Heading>
-      </div>
+      </article>
       <CardIndustryGroup data={industriesMockedData} />
-    </div>
+    </section>
   );
 };
 
