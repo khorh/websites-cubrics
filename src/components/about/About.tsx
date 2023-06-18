@@ -6,8 +6,12 @@ import { aboutMockedData } from "./About.mocked";
 
 const About: FC = () => {
   return (
-    <section className={styles.common}>
-      <article className={styles.title}>
+    <section
+      id={"about"}
+      className={styles.container}
+      aria-label={"about-section"}
+    >
+      <article className={styles.title} aria-label={"about-title"}>
         <Heading type={"h2"} colour={"primary__dark"}>
           ABOUT
         </Heading>

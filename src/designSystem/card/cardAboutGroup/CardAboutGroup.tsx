@@ -13,7 +13,11 @@ const CardAboutGroup: FC<ICardAboutGroup> = (props) => {
   const displayAboutData = props.data.map((about) => {
     return <CardAbout data={about} key={about.about_name} />;
   });
-  return <article className={styles.common}>{displayAboutData}</article>;
+  return (
+    <article className={styles.common} aria-label={"about-content"}>
+      {displayAboutData}
+    </article>
+  );
 };
 
 export default CardAboutGroup;
