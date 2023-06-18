@@ -7,7 +7,7 @@ describe("navigation link", () => {
     const navigationLinkElement = screen.getByRole("link");
     expect(navigationLinkElement.tagName).toBe("A");
     expect(navigationLinkElement).toHaveClass("common", { exact: true });
-    expect(navigationLinkElement.textContent).toBe("Link");
     expect(navigationLinkElement).toHaveAttribute("href", "#link");
+    expect(navigationLinkElement.textContent).toBe("Link");
   });
 });
