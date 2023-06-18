@@ -19,7 +19,7 @@ const CardService: FC<ICardService> = (props) => {
       <div className={styles.firstContainer}>
         <div className={styles.firstContainer__iconTitle}>
           <Icon name={props.data.service_icon} />
-          <Heading type={"h2"} colour={"base__light"}>
+          <Heading type={"h3"} colour={"base__light"}>
             {props.data.service_name}
           </Heading>
         </div>
