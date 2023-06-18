@@ -13,7 +13,7 @@ interface ICardAbout extends React.HTMLAttributes<HTMLDivElement> {
 const CardAbout: FC<ICardAbout> = (props) => {
   return (
     <div className={styles.container} aria-label={"about-content-individual"}>
-      <Heading type={"h2"}>{props.data.about_name}</Heading>
+      <Heading type={"h3"}>{props.data.about_name}</Heading>
       <Text type={"p2"}>{props.data.about_description}</Text>
     </div>
   );

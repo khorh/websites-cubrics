@@ -20,7 +20,7 @@ const CardIndustry: FC<ICardIndustry> = (props) => {
         />
       </div>
       <div className={styles.title}>
-        <Heading type={"h2"} colour={"base__light"}>
+        <Heading type={"h3"} colour={"base__light"}>
           {props.data.industries_name}
         </Heading>
       </div>
