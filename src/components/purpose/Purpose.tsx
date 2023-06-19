@@ -5,7 +5,7 @@ import Text from "../../designSystem/text/Text";
 
 const Purpose: FC = () => {
   return (
-    <section className={styles.common} aria-label={"purpose"}>
+    <section className={styles.common} aria-label={"purpose-section"}>
       <Heading type={"h2"} colour={"primary__dark"}>
         PURPOSE
       </Heading>

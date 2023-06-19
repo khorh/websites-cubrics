@@ -4,7 +4,7 @@ import Purpose from "./Purpose";
 describe("purpose", () => {
   test("should render the purpose component", () => {
     render(<Purpose />);
-    const purposeComponent = screen.getByLabelText("purpose");
+    const purposeComponent = screen.getByLabelText("purpose-section");
     expect(purposeComponent.tagName).toBe("SECTION");
     expect(purposeComponent).toHaveClass("common", { exact: true });
     expect(purposeComponent.textContent).toBe(

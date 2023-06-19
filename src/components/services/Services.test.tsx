@@ -4,7 +4,7 @@ import Services from "./Services";
 describe("service", () => {
   test("should render services", () => {
     render(<Services />);
-    const servicesElement = screen.getByLabelText("services");
+    const servicesElement = screen.getByLabelText("services-section");
     expect(servicesElement).toHaveClass("common", { exact: true });
     const titleElement = screen.getByLabelText("title");
     expect(titleElement).toHaveClass("title", { exact: true });
