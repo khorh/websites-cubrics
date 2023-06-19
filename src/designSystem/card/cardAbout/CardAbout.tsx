@@ -5,7 +5,8 @@ import Text from "../../text/Text";
 
 interface ICardAbout extends React.HTMLAttributes<HTMLDivElement> {
   data: {
-    about_name: string;
+    about_id: string;
+    about_title: string;
     about_description: string;
   };
 }
@@ -13,7 +14,7 @@ interface ICardAbout extends React.HTMLAttributes<HTMLDivElement> {
 const CardAbout: FC<ICardAbout> = (props) => {
   return (
     <div className={styles.container} aria-label={"about-content-individual"}>
-      <Heading type={"h3"}>{props.data.about_name}</Heading>
+      <Heading type={"h3"}>{props.data.about_title}</Heading>
       <Text type={"p2"}>{props.data.about_description}</Text>
     </div>
   );

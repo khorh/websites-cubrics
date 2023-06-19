@@ -4,14 +4,15 @@ import CardAbout from "../cardAbout/CardAbout";
 
 interface ICardAboutGroup extends React.HTMLAttributes<HTMLTextAreaElement> {
   data: {
-    about_name: string;
+    about_id: string;
+    about_title: string;
     about_description: string;
   }[];
 }
 
 const CardAboutGroup: FC<ICardAboutGroup> = (props) => {
   const displayAboutData = props.data.map((about) => {
-    return <CardAbout data={about} key={about.about_name} />;
+    return <CardAbout data={about} key={about.about_id} />;
   });
   return (
     <article className={styles.container} aria-label={"about-content"}>

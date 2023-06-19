@@ -16,7 +16,7 @@ describe("about", () => {
     });
     expect(aboutTitleElement.tagName).toBe("ARTICLE");
     expect(aboutTitleElement).toHaveClass("title");
-    const aboutTitleHeadingElement = screen.getByRole("heading", {name: /about/i});
+    const aboutTitleHeadingElement = screen.getByRole("heading", { level: 2 });
     expect(aboutTitleHeadingElement.tagName).toBe("H2");
     expect(aboutTitleHeadingElement.textContent).toBe("ABOUT");
   });
