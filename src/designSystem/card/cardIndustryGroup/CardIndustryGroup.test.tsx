@@ -5,8 +5,9 @@ import { industriesMockedData } from "../../../components/industries/Industries.
 describe("card industry group", () => {
   test("should render a card industry group", () => {
     render(<CardIndustryGroup data={industriesMockedData} />);
-    const cardIndustryGroupElement = screen.getByLabelText("group");
-    expect(cardIndustryGroupElement).toHaveClass("common");
+    const cardIndustryGroupElement =
+      screen.getByLabelText("industries-content");
+    expect(cardIndustryGroupElement).toHaveClass("container");
     expect(cardIndustryGroupElement.textContent).toBe(
       "ConsumerEnergyHealthcareTelecoms"
     );
