@@ -34,7 +34,7 @@ describe("header", () => {
   });
   test("should render the header's contact button", () => {
     render(<Header />);
-    const headerComponent = screen.getByRole("button");
-    expect(headerComponent.textContent).toBe("Contact");
+    const headerButtonElement = screen.getByRole("button");
+    expect(headerButtonElement.textContent).toBe("Contact");
   });
 });

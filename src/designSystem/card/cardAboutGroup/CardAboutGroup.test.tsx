@@ -3,7 +3,7 @@ import CardAboutGroup from "./CardAboutGroup";
 import { aboutMockedData } from "../../../components/about/About.mocked";
 
 describe("card about group", () => {
-  test("should render an about group", () => {
+  test("should render the about group", () => {
     render(<CardAboutGroup data={aboutMockedData} />);
     const cardAboutGroupElement = screen.getByRole("article", {
       name: /about-content/i,

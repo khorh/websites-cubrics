@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Industries from "./Industries";
 
 describe("industries", () => {
-  test("should render an industries component", () => {
+  test("should render the industries section", () => {
     render(<Industries />);
     const industriesElement = screen.getByLabelText("industries-section");
     expect(industriesElement).toHaveClass("container", { exact: true });
@@ -12,7 +12,7 @@ describe("industries", () => {
       "INDUSTRIESConsumerEnergyHealthcareTelecoms"
     );
   });
-  test("should render an industries title", () => {
+  test("should render the industries' title", () => {
     render(<Industries />);
     const titleElement = screen.getByLabelText("industries-title");
     expect(titleElement).toHaveClass("title", { exact: true });
@@ -22,7 +22,7 @@ describe("industries", () => {
     expect(industriesTitleHeadingElement.tagName).toBe("H2");
     expect(industriesTitleHeadingElement.textContent).toBe("INDUSTRIES");
   });
-  test("should render an industries content", () => {
+  test("should render the industries' content", () => {
     render(<Industries />);
     const industriesContentElement = screen.getByRole("article", {
       name: /industries-content/i,

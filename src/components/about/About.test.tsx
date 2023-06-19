@@ -2,14 +2,14 @@ import { render, screen } from "@testing-library/react";
 import About from "./About";
 
 describe("about", () => {
-  test("should render an about component", () => {
+  test("should render the about section", () => {
     render(<About />);
     const aboutElement = screen.getByRole("region");
     expect(aboutElement.tagName).toBe("SECTION");
     expect(aboutElement.id).toBe("about");
     expect(aboutElement).toHaveClass("container");
   });
-  test("should render an about title", () => {
+  test("should render the about's title", () => {
     render(<About />);
     const aboutTitleElement = screen.getByRole("article", {
       name: /about-title/i,
@@ -20,7 +20,7 @@ describe("about", () => {
     expect(aboutTitleHeadingElement.tagName).toBe("H2");
     expect(aboutTitleHeadingElement.textContent).toBe("ABOUT");
   });
-  test("should render an about content", () => {
+  test("should render the about's content", () => {
     render(<About />);
     const aboutContentElement = screen.getByRole("article", {
       name: /about-content/i,

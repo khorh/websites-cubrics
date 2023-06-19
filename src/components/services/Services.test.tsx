@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Services from "./Services";
 
 describe("service", () => {
-  test("should render services", () => {
+  test("should render the services section", () => {
     render(<Services />);
     const servicesElement = screen.getByLabelText("services-section");
     expect(servicesElement).toHaveClass("common", { exact: true });

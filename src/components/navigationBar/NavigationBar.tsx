@@ -4,20 +4,6 @@ import Icon from "../../designSystem/icon/Icon";
 import Logo from "../../designSystem/logo/Logo";
 import NavigationLink from "../../designSystem/navigationLink/NavigationLink";
 
-/* 
-  Web accessibility
-  - Role is not required as the <nav> tag infers the role as navigation.
-  - Aria label is not required as there is only one navigation bar.
-  - For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role.
-
-  - Roles are not added to <div> tags since it can be used for different purposes. Instead unique aria labels have been added.
-
-  Unit testing
-  - The unique aria label can be used to determine if the different containers are present.
-  - For more information on button, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role.
-  - For more information on menubar, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role.
-*/
-
 const NavigationBar: FC = () => {
   const navigationLinks = [
     {

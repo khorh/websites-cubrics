@@ -3,7 +3,7 @@ import CardServiceGroup from "./CardServiceGroup";
 import { serviceMockedData } from "../../../components/services/Services.mocked";
 
 describe("card service group", () => {
-  test("should render a card service group", () => {
+  test("should render the card service group", () => {
     render(<CardServiceGroup data={serviceMockedData} />);
     const cardServiceGroupElement = screen.getByLabelText("group");
     expect(cardServiceGroupElement).toHaveClass("common");

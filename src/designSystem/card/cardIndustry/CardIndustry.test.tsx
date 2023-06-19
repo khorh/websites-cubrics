@@ -10,7 +10,7 @@ const consumerData = {
 };
 
 describe("card industry", () => {
-  test("should render a card industry", () => {
+  test("should render the card industry", () => {
     render(<CardIndustry data={consumerData} />);
     const cardIndustryElement = screen.getByLabelText(
       "industries-content-individual"
@@ -18,7 +18,7 @@ describe("card industry", () => {
     expect(cardIndustryElement.tagName).toBe("DIV");
     expect(cardIndustryElement).toHaveClass("container", { exact: true });
   });
-  test("should render a card industry image", () => {
+  test("should render the card industry's image", () => {
     render(<CardIndustry data={consumerData} />);
     const cardIndustryImageContainerElement = screen.getByLabelText(
       "industries-content-image"
@@ -30,7 +30,7 @@ describe("card industry", () => {
     expect(cardIndustryImageElement.src).toBe("http://localhost/consumer.jpg");
     expect(cardIndustryImageElement.alt).toBe("person walking with bag");
   });
-  test("should render a card industry title", () => {
+  test("should render the card industry's title", () => {
     render(<CardIndustry data={consumerData} />);
     const cardIndustryTitleContainerElement = screen.getByLabelText(
       "industries-content-title"
