@@ -1,6 +1,6 @@
 @import "../../designSystem/styles/main.scss";
 
-.common {
+.container {
   grid-column: 1 / -1;
   background-color: $colour-primary-light;
   padding: 48px 0 64px;
@@ -28,8 +28,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.serviceGroup {
-  grid-column: 2 / -2;
 }
