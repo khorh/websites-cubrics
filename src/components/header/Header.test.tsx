@@ -6,19 +6,19 @@ describe("header", () => {
     render(<Header />);
     const headerElement = screen.getByRole("banner");
     expect(headerElement.tagName).toBe("HEADER");
-    expect(headerElement).toHaveClass("background");
+    expect(headerElement).toHaveClass("background", { exact: true });
   });
   test("should render the header's content", () => {
     render(<Header />);
     const headerContentElement = screen.getByLabelText("header-content");
     expect(headerContentElement.tagName).toBe("DIV");
-    expect(headerContentElement).toHaveClass("content");
+    expect(headerContentElement).toHaveClass("content", { exact: true });
   });
   test("should render the header's titles", () => {
     render(<Header />);
     const headerTitlesElement = screen.getByLabelText("header-titles");
     expect(headerTitlesElement.tagName).toBe("DIV");
-    expect(headerTitlesElement).toHaveClass("titles");
+    expect(headerTitlesElement).toHaveClass("titles", { exact: true });
     const headerTitleHeadingElement = screen.getByRole("heading", { level: 1 });
     expect(headerTitleHeadingElement.tagName).toBe("H1");
     expect(headerTitleHeadingElement.textContent).toBe(

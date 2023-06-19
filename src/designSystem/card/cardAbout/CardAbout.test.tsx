@@ -13,7 +13,7 @@ describe("card about", () => {
     render(<CardAbout data={purposeData} />);
     const cardAboutElement = screen.getByLabelText("about-content-individual");
     expect(cardAboutElement.tagName).toBe("DIV");
-    expect(cardAboutElement).toHaveClass("container");
+    expect(cardAboutElement).toHaveClass("container", { exact: true });
   });
   test("should render the card about's title", () => {
     render(<CardAbout data={purposeData} />);

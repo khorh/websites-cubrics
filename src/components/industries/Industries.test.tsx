@@ -13,7 +13,7 @@ describe("industries", () => {
     render(<Industries />);
     const industriesTitleElement = screen.getByLabelText("industries-title");
     expect(industriesTitleElement.tagName).toBe("ARTICLE");
-    expect(industriesTitleElement).toHaveClass("title");
+    expect(industriesTitleElement).toHaveClass("title", { exact: true });
     const industriesTitleHeadingElement = screen.getByRole("heading", {
       level: 2,
     });

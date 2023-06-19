@@ -13,7 +13,7 @@ describe("about", () => {
     render(<About />);
     const aboutTitleElement = screen.getByLabelText("about-title");
     expect(aboutTitleElement.tagName).toBe("ARTICLE");
-    expect(aboutTitleElement).toHaveClass("title");
+    expect(aboutTitleElement).toHaveClass("title", { exact: true });
     const aboutTitleHeadingElement = screen.getByRole("heading", { level: 2 });
     expect(aboutTitleHeadingElement.tagName).toBe("H2");
     expect(aboutTitleHeadingElement.textContent).toBe("ABOUT");
