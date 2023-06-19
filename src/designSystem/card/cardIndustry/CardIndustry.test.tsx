@@ -23,7 +23,9 @@ describe("card industry", () => {
     const cardIndustryImageContainerElement = screen.getByLabelText(
       "industries-content-image"
     );
-    expect(cardIndustryImageContainerElement).toHaveClass("image");
+    expect(cardIndustryImageContainerElement).toHaveClass("image", {
+      exact: true,
+    });
     const cardIndustryImageElement = screen.getByRole(
       "img"
     ) as HTMLImageElement;
