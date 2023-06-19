@@ -74,56 +74,56 @@ Source: https://testing-library.com/docs/queries/bytestid/
 
 ## Anchor
 
-- <a> tag has an implicit aria-role called "link". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/link_role.
+- `<a>` tag has an implicit aria-role called "link". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/link_role.
 - For unit testing, use getByRole("link").
 
 ## Article
 
-- <article> tag does not have an implicit aria-role so it is best to add an aria-label.
+- `<article>` tag does not have an implicit aria-role so it is best to add an aria-label.
 - For unit testing, use the content getByLabelText rather than getByRole.
 
 ## Button
 
-- <button> tag has an implicit aria-role called "button". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role.
+- `<button>` tag has an implicit aria-role called "button". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role.
 - For unit testing, use getByRole("button").
 
 ## Division
 
-- <div> tag does not have an implicit aria-role so it is best to add an aria-label.
+- `<div>` tag does not have an implicit aria-role so it is best to add an aria-label.
 - For unit testing, use the content getByLabelText rather than getByRole.
 
 ## Footer
 
-- <footer> tag has an implicit aria-role called "contentinfo". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role.
+- `<footer>` tag has an implicit aria-role called "contentinfo". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role.
 - For unit testing, use getByRole("content-info").
 
 ## Header
 
-- <header> tag has an implicit aria-role called "banner". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role.
+- `<header>` tag has an implicit aria-role called "banner". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role.
 - For unit testing, use getByRole("banner").
 
 ## Heading
 
-- <h1>, <h2> and <h3> tags have implicit aria-roles called "heading". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role.
+- `<h1>`, `<h2>` and `<h3>` tags have implicit aria-roles called "heading". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role.
 - For unit testing, h1 is getByRole("heading", {level: 1}), h2 is getByRole("heading", {level: 2}) and h3 is getByRole("heading", {level: 3}).
 
 ## Image
 
-- <img /> tag has an implicit aria-role called "img". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/img_role.
+- `<img />` tag has an implicit aria-role called "img". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/img_role.
 - A unique aria label is not required as the alt attribute infers the label.
 - For unit testing, use getByRole("img"). If there are more than one images, use getByAltText.
 
 ## Navigation
 
-- <nav> tag has an implicit aria-role called "navigation". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role.
+- `<nav>` tag has an implicit aria-role called "navigation". For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role.
 - For unit testing, use getByRole("navigation").
 
 ## Paragraph
 
-- <p> tag does not have an implicit aria-role so it is best to add an aria-label. For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles
+- `<p>` tag does not have an implicit aria-role so it is best to add an aria-label. For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles
 - For unit testing, use the content getByLabelText rather than getByRole.
 
 ## Section
 
-- <section> tag does not have an implicit aria-role so it is best to add an aria-label.
+- `<section>` tag does not have an implicit aria-role so it is best to add an aria-label.
 - For unit testing, use the content getByLabelText rather than getByRole.
