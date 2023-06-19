@@ -5,17 +5,15 @@ describe("industries", () => {
   test("should render the industries section", () => {
     render(<Industries />);
     const industriesElement = screen.getByLabelText("industries-section");
+    expect(industriesElement.tagName).toBe("SECTION");
+    expect(industriesElement.id).toBe("industries");
     expect(industriesElement).toHaveClass("container", { exact: true });
-    const titleElement = screen.getByLabelText("industries-title");
-    expect(titleElement).toHaveClass("title", { exact: true });
-    expect(industriesElement.textContent).toBe(
-      "INDUSTRIESConsumerEnergyHealthcareTelecoms"
-    );
   });
   test("should render the industries' title", () => {
     render(<Industries />);
-    const titleElement = screen.getByLabelText("industries-title");
-    expect(titleElement).toHaveClass("title", { exact: true });
+    const industriesTitleElement = screen.getByLabelText("industries-title");
+    expect(industriesTitleElement.tagName).toBe("ARTICLE");
+    expect(industriesTitleElement).toHaveClass("title");
     const industriesTitleHeadingElement = screen.getByRole("heading", {
       level: 2,
     });
@@ -24,9 +22,8 @@ describe("industries", () => {
   });
   test("should render the industries' content", () => {
     render(<Industries />);
-    const industriesContentElement = screen.getByRole("article", {
-      name: /industries-content/i,
-    });
+    const industriesContentElement =
+      screen.getByLabelText("industries-content");
     expect(industriesContentElement.textContent).toBe(
       "ConsumerEnergyHealthcareTelecoms"
     );
