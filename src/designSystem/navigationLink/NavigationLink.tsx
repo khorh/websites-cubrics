@@ -11,6 +11,7 @@ const NavigationLink: FC<INavigationLink> = (props) => {
     <a
       className={styles.common}
       href={props.destination}
+      role={"menuitem"}
     >
       {props.name}
     </a>
