@@ -39,7 +39,7 @@ const NavigationBar: FC = () => {
   };
 
   return (
-    <nav className={styles.container}>
+    <nav className={styles.container} role={"menu"}>
       <Logo />
       <div
         className={styles.links__vertical__container}

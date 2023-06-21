@@ -4,7 +4,7 @@ import App from "./App";
 describe("app", () => {
   test("renders the navigation component", () => {
     render(<App />);
-    const navigationElement = screen.getByRole("navigation");
+    const navigationElement = screen.getByRole("menu");
     expect(navigationElement).toBeInTheDocument();
   });
   test("renders the header component", () => {

@@ -4,7 +4,7 @@ import NavigationBar from "./NavigationBar";
 describe("navigation bar", () => {
   test("should render the navigation bar", () => {
     render(<NavigationBar />);
-    const navigationBarElement = screen.getByRole("navigation");
+    const navigationBarElement = screen.getByRole("menu");
     expect(navigationBarElement.tagName).toBe("NAV");
     expect(navigationBarElement).toHaveClass("container", { exact: true });
   });
