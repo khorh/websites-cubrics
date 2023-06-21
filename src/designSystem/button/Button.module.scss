@@ -5,11 +5,12 @@
   border-radius: 8px;
   border: 4px solid $colour-secondary-main;
   background-color: $colour-secondary-main;
-  padding: 4px 16px;
+  padding: 4px 12px;
   width: fit-content;
   font-family: $font-family-secondary;
   font-size: 24px;
   font-weight: 600;
+  color: $colour-base-dark;
   line-height: 100%;
   &:hover {
     border: 4px solid $colour-secondary-light;
