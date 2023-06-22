@@ -16,7 +16,7 @@ const Header: FC = () => {
             Driving success for global brand leaders
           </Text>
         </div>
-        <Button>Contact</Button>
+        <Button email={"contact@cubrics.co.uk"}>Contact</Button>
       </div>
     </header>
   );
