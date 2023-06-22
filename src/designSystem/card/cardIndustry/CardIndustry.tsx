@@ -4,7 +4,8 @@ import Heading from "../../heading/Heading";
 
 interface ICardIndustry extends React.HTMLAttributes<HTMLDivElement> {
   data: {
-    industries_name: string;
+    industries_id: string;
+    industries_title: string;
     industries_image: string;
     industries_alt: string;
   };
@@ -12,16 +13,19 @@ interface ICardIndustry extends React.HTMLAttributes<HTMLDivElement> {
 
 const CardIndustry: FC<ICardIndustry> = (props) => {
   return (
-    <div className={styles.common}>
-      <div className={styles.image}>
+    <div
+      className={styles.container}
+      aria-label={"industries-content-individual"}
+    >
+      <div className={styles.image} aria-label={"industries-content-image"}>
         <img
           src={props.data.industries_image}
           alt={props.data.industries_alt}
         />
       </div>
-      <div className={styles.title}>
-        <Heading type={"h2"} colour={"base__light"}>
-          {props.data.industries_name}
+      <div className={styles.title} aria-label={"industries-content-title"}>
+        <Heading type={"h3"} colour={"base__light"}>
+          {props.data.industries_title}
         </Heading>
       </div>
     </div>

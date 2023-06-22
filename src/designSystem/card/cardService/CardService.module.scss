@@ -1,6 +1,6 @@
 @import "../../styles/main.scss";
 
-.common {
+.container {
   @include breakpoint-xs {
     display: flex;
     flex-direction: row;

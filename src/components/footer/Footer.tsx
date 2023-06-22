@@ -4,7 +4,7 @@ import Text from "../../designSystem/text/Text";
 
 const Footer: FC = () => {
   return (
-    <footer className={styles.common}>
+    <footer className={styles.container}>
       <Text type={"footer"}>© Copyright Cubrics 2023</Text>
     </footer>
   );

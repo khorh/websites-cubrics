@@ -2,30 +2,39 @@ import { render, screen } from "@testing-library/react";
 import Header from "./Header";
 
 describe("header", () => {
-  test("shoulder render the header", () => {
+  test("should render the header", () => {
     render(<Header />);
-    const headerComponent = screen.getByRole("banner");
-    expect(headerComponent.tagName).toBe("HEADER");
-    expect(headerComponent).toHaveClass("background");
+    const headerElement = screen.getByRole("banner");
+    expect(headerElement.tagName).toBe("HEADER");
+    expect(headerElement).toHaveClass("background", { exact: true });
   });
-  test("shoulder render the header's content", () => {
+  test("should render the header's content", () => {
     render(<Header />);
-    const headerComponent = screen.getByLabelText("header content");
-    expect(headerComponent.tagName).toBe("DIV");
-    expect(headerComponent).toHaveClass("content");
+    const headerContentElement = screen.getByLabelText("header-content");
+    expect(headerContentElement.tagName).toBe("DIV");
+    expect(headerContentElement).toHaveClass("content", { exact: true });
   });
-  test("shoulder render the header's titles", () => {
+  test("should render the header's titles", () => {
     render(<Header />);
-    const headerComponent = screen.getByLabelText("header titles");
-    expect(headerComponent.tagName).toBe("DIV");
-    expect(headerComponent).toHaveClass("titles");
-    expect(headerComponent.textContent).toBe(
-      "Accelerating digital transformationDriving success for global brand leaders"
+    const headerTitlesElement = screen.getByLabelText("header-titles");
+    expect(headerTitlesElement.tagName).toBe("DIV");
+    expect(headerTitlesElement).toHaveClass("titles", { exact: true });
+    const headerTitleHeadingElement = screen.getByRole("heading", { level: 1 });
+    expect(headerTitleHeadingElement.tagName).toBe("H1");
+    expect(headerTitleHeadingElement.textContent).toBe(
+      "Accelerating digital transformation"
+    );
+    const headerTitleParagraphElement = screen.getByText(
+      "Driving success for global brand leaders"
+    );
+    expect(headerTitleParagraphElement.tagName).toBe("P");
+    expect(headerTitleParagraphElement.textContent).toBe(
+      "Driving success for global brand leaders"
     );
   });
-  test("should render a contact button", () => {
+  test("should render the header's contact button", () => {
     render(<Header />);
-    const headerComponent = screen.getByRole("button");
-    expect(headerComponent.textContent).toBe("Contact");
+    const headerButtonElement = screen.getByRole("button");
+    expect(headerButtonElement.textContent).toBe("Contact");
   });
 });

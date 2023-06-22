@@ -1,13 +1,13 @@
 @import "../../styles/main.scss";
 
-.common {
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  gap: 32px;
 
   @include breakpoint-xs {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 16px;
   }
 }

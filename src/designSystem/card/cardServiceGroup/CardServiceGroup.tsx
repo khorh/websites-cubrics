@@ -4,8 +4,9 @@ import CardService from "../cardService/CardService";
 
 interface ICardServiceGroup extends React.HTMLAttributes<HTMLDivElement> {
   data: {
+    service_id: string;
     service_icon: string;
-    service_name: string;
+    service_title: string;
     service_intro: string;
     service_description: string;
   }[];
@@ -13,12 +14,12 @@ interface ICardServiceGroup extends React.HTMLAttributes<HTMLDivElement> {
 
 const CardServiceGroup: FC<ICardServiceGroup> = (props) => {
   const displayServicesData = props.data.map((service) => {
-    return <CardService data={service} key={service.service_name} />;
+    return <CardService data={service} key={service.service_id} />;
   });
   return (
-    <div className={styles.common} aria-label={"group"}>
+    <article className={styles.container} aria-label={"services-content"}>
       {displayServicesData}
-    </div>
+    </article>
   );
 };
 

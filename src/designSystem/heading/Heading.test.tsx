@@ -33,7 +33,7 @@ describe("heading with colour options", () => {
       </Heading>
     );
     const headingElement = screen.getByRole("heading");
-    expect(headingElement).toHaveClass("common primary__dark");
+    expect(headingElement).toHaveClass("common primary__dark", { exact: true });
   });
   test("should render h1 with colour base__light", () => {
     render(
@@ -42,6 +42,6 @@ describe("heading with colour options", () => {
       </Heading>
     );
     const headingElement = screen.getByRole("heading");
-    expect(headingElement).toHaveClass("common base__light");
+    expect(headingElement).toHaveClass("common base__light", { exact: true });
   });
 });

@@ -6,15 +6,17 @@ import { serviceMockedData } from "./Services.mocked";
 
 const Services: FC = () => {
   return (
-    <section id={"services"} className={styles.common} aria-label="services">
-      <article className={styles.title} aria-label="title">
+    <section
+      id={"services"}
+      className={styles.container}
+      aria-label={"services-section"}
+    >
+      <article className={styles.title} aria-label={"services-title"}>
         <Heading type={"h2"} colour={"primary__dark"}>
           SERVICES
         </Heading>
       </article>
-      <article className={styles.serviceGroup} aria-label="serviceGroup">
-        <CardServiceGroup data={serviceMockedData} />
-      </article>
+      <CardServiceGroup data={serviceMockedData} />
     </section>
   );
 };

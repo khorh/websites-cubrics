@@ -6,8 +6,12 @@ import { industriesMockedData } from "./Industries.mocked";
 
 const Industries: FC = () => {
   return (
-    <section id={"industries"} className={styles.common} aria-label="industries">
-      <article className={styles.title} aria-label="title">
+    <section
+      id={"industries"}
+      className={styles.container}
+      aria-label={"industries-section"}
+    >
+      <article className={styles.title} aria-label={"industries-title"}>
         <Heading type={"h2"} colour={"primary__dark"}>
           INDUSTRIES
         </Heading>

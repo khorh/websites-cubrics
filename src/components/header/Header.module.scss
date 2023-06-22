@@ -31,6 +31,9 @@
 }
 
 .titles {
+  border-radius: 8px;
+  background-color: $colour-base-dark-opacity;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;

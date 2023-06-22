@@ -9,27 +9,27 @@
 }
 
 .links__vertical__container {
-  @include breakpoint-s {
+  @include breakpoint-xs {
     display: none;
   }
 }
 
 .links__vertical {
-  position: fixed;
+  position: absolute;
   top: 112px;
   right: 0;
   border-radius: 0 0 8px 8px;
   background-color: $colour-base-light;
-  padding: 0 24px 24px 24px;
+  padding: 0 24px 16px 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .links__horizontal__container {
   margin-left: 24px;
   display: none;
-  @include breakpoint-s {
+  @include breakpoint-xs {
     display: block;
   }
 }
