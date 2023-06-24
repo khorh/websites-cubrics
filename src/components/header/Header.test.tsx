@@ -8,6 +8,9 @@ describe("header", () => {
     expect(headerElement.tagName).toBe("HEADER");
     expect(headerElement).toHaveClass("background", { exact: true });
   });
+});
+
+describe("header's content", () => {
   test("should render the header's content", async () => {
     render(<Header />);
     await waitFor(() => {
