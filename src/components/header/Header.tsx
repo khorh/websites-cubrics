@@ -32,7 +32,7 @@ const Header: FC = () => {
     getHeader().then((response: any) => setHeader(response));
   });
 
-  const displayHeader = header.map((item) => {
+  const displayHeader = header.map((item: IHeaderResponse) => {
     return (
       <div
         className={styles.content}
