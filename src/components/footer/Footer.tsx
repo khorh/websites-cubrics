@@ -28,7 +28,7 @@ const Footer: FC = () => {
     getFooter().then((response: any) => setFooter(response));
   });
 
-  const displayFooterContent = footer.map((item) => {
+  const displayFooterContent = footer.map((item: IFooterResponse) => {
     return (
       <Text type={"footer"} key={item.copyright}>
         {item.copyright}
