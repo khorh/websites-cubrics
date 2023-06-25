@@ -4,15 +4,17 @@ import CardAbout from "../cardAbout/CardAbout";
 
 interface ICardAboutGroup extends React.HTMLAttributes<HTMLTextAreaElement> {
   data: {
-    about_id: string;
-    about_title: string;
-    about_description: string;
+    title: string;
+    description: string;
+    order: number;
   }[];
 }
 
 const CardAboutGroup: FC<ICardAboutGroup> = (props) => {
-  const displayAboutData = props.data.map((about) => {
-    return <CardAbout data={about} key={about.about_id} />;
+  const sortAboutData = props.data.sort((a, b) => a.order - b.order);
+
+  const displayAboutData = sortAboutData.map((item) => {
+    return <CardAbout data={item} key={item.title} />;
   });
   return (
     <article className={styles.container} aria-label={"about-content"}>
