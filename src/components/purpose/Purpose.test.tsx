@@ -8,17 +8,25 @@ describe("purpose", () => {
     expect(purposeElement.tagName).toBe("SECTION");
     expect(purposeElement).toHaveClass("container", { exact: true });
   });
-  test("should render the purpose's title", async () => {
+  test("should render the purpose's content", async () => {
+    render(<Purpose />);
     await waitFor(() => {
-      render(<Purpose />);
+      const purposeElement = screen.getByLabelText("purpose-content");
+      expect(purposeElement.tagName).toBe("ARTICLE");
+      expect(purposeElement).toHaveClass("content", { exact: true });
+    });
+  });
+  test("should render the purpose's title", async () => {
+    render(<Purpose />);
+    await waitFor(() => {
       const purposeElement = screen.getByRole("heading", { level: 2 });
       expect(purposeElement.tagName).toBe("H2");
       expect(purposeElement.textContent).toBe("PURPOSE");
     });
   });
   test("should render the purpose's content", async () => {
+    render(<Purpose />);
     await waitFor(() => {
-      render(<Purpose />);
       const purposeElement = screen.getByText(
         "Our purpose is to realise our client's business value by delivering high quality results, at a faster pace and lowering your transformation costs."
       );

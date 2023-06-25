@@ -33,7 +33,7 @@ const Purpose: FC = () => {
 
   const displayPurposeContent = purpose.map((item: IPurposeResponse) => {
     return (
-      <div
+      <article
         className={styles.content}
         aria-label={"purpose-content"}
         key={item.title}
@@ -42,7 +42,7 @@ const Purpose: FC = () => {
           {titleUppercase(item.title)}
         </Heading>
         <Text type={"p1"}>{item.description}</Text>
-      </div>
+      </article>
     );
   });
 
