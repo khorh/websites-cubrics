@@ -3,6 +3,7 @@ import styles from "./Purpose.module.scss";
 import Heading from "../../designSystem/heading/Heading";
 import Text from "../../designSystem/text/Text";
 import { client } from "../../useContentful";
+import { titleUppercase } from "../../utils/title.utils";
 
 interface IPurposeResponse {
   title: string;
@@ -38,7 +39,7 @@ const Purpose: FC = () => {
         key={item.title}
       >
         <Heading type={"h2"} colour={"primary__dark"}>
-          {item.title}
+          {titleUppercase(item.title)}
         </Heading>
         <Text type={"p1"}>{item.description}</Text>
       </section>
