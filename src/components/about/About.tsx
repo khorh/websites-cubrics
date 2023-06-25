@@ -5,6 +5,7 @@ import Heading from "../../designSystem/heading/Heading";
 import { client } from "../../useContentful";
 
 interface IAboutResponse {
+  id: number;
   title: string;
   description: string;
   order: number;

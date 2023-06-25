@@ -5,6 +5,7 @@ import Text from "../../text/Text";
 
 interface ICardAbout extends React.HTMLAttributes<HTMLDivElement> {
   data: {
+    id: number;
     title: string;
     description: string;
     order: number;
