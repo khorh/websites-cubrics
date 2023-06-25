@@ -33,20 +33,24 @@ const Purpose: FC = () => {
 
   const displayPurposeContent = purpose.map((item: IPurposeResponse) => {
     return (
-      <section
-        className={styles.container}
-        aria-label={"purpose-section"}
+      <div
+        className={styles.content}
+        aria-label={"purpose-content"}
         key={item.title}
       >
         <Heading type={"h2"} colour={"primary__dark"}>
           {titleUppercase(item.title)}
         </Heading>
         <Text type={"p1"}>{item.description}</Text>
-      </section>
+      </div>
     );
   });
 
-  return <>{displayPurposeContent}</>;
+  return (
+    <section className={styles.container} aria-label={"purpose-section"}>
+      {displayPurposeContent}
+    </section>
+  );
 };
 
 export default Purpose;
