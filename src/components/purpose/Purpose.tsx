@@ -3,10 +3,8 @@ import styles from "./Purpose.module.scss";
 import Heading from "../../designSystem/heading/Heading";
 import Text from "../../designSystem/text/Text";
 import { client } from "../../useContentful";
-import { titleUppercase } from "../../utils/title.utils";
 
 interface IPurposeResponse {
-  title: string;
   description: string;
 }
 
@@ -36,10 +34,10 @@ const Purpose: FC = () => {
       <article
         className={styles.content}
         aria-label={"purpose-content"}
-        key={item.title}
+        key={item.description}
       >
         <Heading type={"h2"} colour={"primary__dark"}>
-          {titleUppercase(item.title)}
+          PURPOSE
         </Heading>
         <Text type={"p1"}>{item.description}</Text>
       </article>
