@@ -1,14 +1,10 @@
 import { FC } from "react";
 import styles from "./CardAboutGroup.module.scss";
 import CardAbout from "../cardAbout/CardAbout";
+import { IAbout } from "../../../components/about/About.type";
 
 interface ICardAboutGroup extends React.HTMLAttributes<HTMLTextAreaElement> {
-  data: {
-    id: number;
-    title: string;
-    description: string;
-    order: number;
-  }[];
+  data: IAbout[];
 }
 
 const CardAboutGroup: FC<ICardAboutGroup> = (props) => {

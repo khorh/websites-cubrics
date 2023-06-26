@@ -2,17 +2,11 @@ import { FC, useEffect, useState } from "react";
 import styles from "./About.module.scss";
 import CardAboutGroup from "../../designSystem/card/cardAboutGroup/CardAboutGroup";
 import Heading from "../../designSystem/heading/Heading";
+import { IAbout } from "./About.type";
 import { client } from "../../useContentful";
 
-interface IAboutResponse {
-  id: number;
-  title: string;
-  description: string;
-  order: number;
-}
-
 const About: FC = () => {
-  const [about, setAbout] = useState<IAboutResponse[]>([]);
+  const [about, setAbout] = useState<IAbout[]>([]);
 
   const getAbout = async () => {
     try {

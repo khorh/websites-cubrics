@@ -1,11 +1,6 @@
-interface IAboutMockedData {
-  id: number;
-  title: string;
-  description: string;
-  order: number;
-}
+import { IAbout } from "./About.type";
 
-export const aboutMockedData: IAboutMockedData[] = [
+export const aboutMockedData: IAbout[] = [
   {
     id: 1,
     title: "Purpose",
