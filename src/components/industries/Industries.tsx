@@ -1,10 +1,33 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import styles from "./Industries.module.scss";
 import CardIndustryGroup from "../../designSystem/card/cardIndustryGroup/CardIndustryGroup";
 import Heading from "../../designSystem/heading/Heading";
-import { industriesMockedData } from "./Industries.mocked";
+import { IIndustry } from "./Industries.type";
+import { client } from "../../useContentful";
 
 const Industries: FC = () => {
+  const [industries, setIndustries] = useState<IIndustry[]>([]);
+
+  const getIndustries = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "industries",
+      });
+      const sanitizedEntries = entries.items.map((item) => {
+        return {
+          ...item.fields,
+        };
+      });
+      return sanitizedEntries;
+    } catch (error) {
+      console.log(`Error fetching industries ${error}`);
+    }
+  };
+
+  useEffect(() => {
+    getIndustries().then((response: any) => setIndustries(response));
+  });
+
   return (
     <section
       id={"industries"}
@@ -16,7 +39,7 @@ const Industries: FC = () => {
           INDUSTRIES
         </Heading>
       </article>
-      <CardIndustryGroup data={industriesMockedData} />
+      <CardIndustryGroup data={industries} />
     </section>
   );
 };
