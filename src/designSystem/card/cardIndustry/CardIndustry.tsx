@@ -1,14 +1,10 @@
 import { FC } from "react";
 import styles from "./CardIndustry.module.scss";
 import Heading from "../../heading/Heading";
+import { IIndustry } from "../../../components/industries/Industries.type";
 
 interface ICardIndustry extends React.HTMLAttributes<HTMLDivElement> {
-  data: {
-    industries_id: string;
-    industries_title: string;
-    industries_image: string;
-    industries_alt: string;
-  };
+  data: IIndustry;
 }
 
 const CardIndustry: FC<ICardIndustry> = (props) => {
@@ -18,14 +14,11 @@ const CardIndustry: FC<ICardIndustry> = (props) => {
       aria-label={"industries-content-individual"}
     >
       <div className={styles.image} aria-label={"industries-content-image"}>
-        <img
-          src={props.data.industries_image}
-          alt={props.data.industries_alt}
-        />
+        <img src={props.data.image.fields.file.url} alt={props.data.alt} />
       </div>
       <div className={styles.title} aria-label={"industries-content-title"}>
         <Heading type={"h3"} colour={"base__light"}>
-          {props.data.industries_title}
+          {props.data.title}
         </Heading>
       </div>
     </div>
