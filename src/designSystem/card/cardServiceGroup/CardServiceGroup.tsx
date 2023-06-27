@@ -1,20 +1,15 @@
 import { FC } from "react";
 import styles from "./CardServiceGroup.module.scss";
 import CardService from "../cardService/CardService";
+import { IServices } from "../../../components/services/Services.type";
 
 interface ICardServiceGroup extends React.HTMLAttributes<HTMLDivElement> {
-  data: {
-    service_id: string;
-    service_icon: string;
-    service_title: string;
-    service_intro: string;
-    service_description: string;
-  }[];
+  data: IServices[];
 }
 
 const CardServiceGroup: FC<ICardServiceGroup> = (props) => {
   const displayServicesData = props.data.map((service) => {
-    return <CardService data={service} key={service.service_id} />;
+    return <CardService data={service} key={service.id} />;
   });
   return (
     <article className={styles.container} aria-label={"services-content"}>
