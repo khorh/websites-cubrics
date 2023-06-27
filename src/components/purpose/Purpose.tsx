@@ -2,14 +2,11 @@ import { FC, useEffect, useState } from "react";
 import styles from "./Purpose.module.scss";
 import Heading from "../../designSystem/heading/Heading";
 import Text from "../../designSystem/text/Text";
+import { IPurpose } from "./Purpose.type";
 import { client } from "../../useContentful";
 
-interface IPurposeResponse {
-  description: string;
-}
-
 const Purpose: FC = () => {
-  const [purpose, setPurpose] = useState<IPurposeResponse[]>([]);
+  const [purpose, setPurpose] = useState<IPurpose[]>([]);
 
   const getPurpose = async () => {
     try {
@@ -29,7 +26,7 @@ const Purpose: FC = () => {
     getPurpose().then((response: any) => setPurpose(response));
   });
 
-  const displayPurposeContent = purpose.map((item: IPurposeResponse) => {
+  const displayPurposeContent = purpose.map((item: IPurpose) => {
     return (
       <article
         className={styles.content}
