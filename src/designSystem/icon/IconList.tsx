@@ -6,7 +6,7 @@ interface IIconImages {
   alt: string;
 }
 
-export const iconMockedImages: IIconImages[] = [
+export const iconListImages: IIconImages[] = [
   {
     name: "menu",
     src: Menu,
