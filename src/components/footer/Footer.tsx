@@ -1,14 +1,11 @@
 import { FC, useEffect, useState } from "react";
 import styles from "./Footer.module.scss";
 import Text from "../../designSystem/text/Text";
+import { IFooter } from "./Footer.type";
 import { client } from "../../useContentful";
 
-interface IFooterResponse {
-  copyright: string;
-}
-
 const Footer: FC = () => {
-  const [footer, setFooter] = useState<IFooterResponse[]>([]);
+  const [footer, setFooter] = useState<IFooter[]>([]);
 
   const getFooter = async () => {
     try {
@@ -28,7 +25,7 @@ const Footer: FC = () => {
     getFooter().then((response: any) => setFooter(response));
   });
 
-  const displayFooterContent = footer.map((item: IFooterResponse) => {
+  const displayFooterContent = footer.map((item: IFooter) => {
     return (
       <Text type={"footer"} key={item.copyright}>
         {item.copyright}
