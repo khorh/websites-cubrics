@@ -22,10 +22,6 @@ const CardService: FC<ICardService> = (props) => {
           className={styles.firstContainer__iconTitle}
           aria-label="services-content-firstContainer-iconTitle"
         >
-          <img
-            src={props.data.iconUrl.fields.file.url}
-            alt={props.data.iconAlt}
-          />
           <Heading type={"h3"} colour={"base__light"}>
             {props.data.title}
           </Heading>

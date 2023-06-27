@@ -1,19 +1,8 @@
 import { IServices } from "./Services.type";
-import FilePost from "./serviceImages/file-post.svg";
-import Hurricane from "./serviceImages/hurricane.svg";
-import People from "./serviceImages/people.svg";
 
 export const serviceMockedData: IServices[] = [
   {
     id: 1,
-    iconUrl: {
-      fields: {
-        file: {
-          url: FilePost,
-        },
-      },
-    },
-    iconAlt: "file post icon",
     title: "Project Management",
     introduction:
       "Companies are continuously transforming their organization to stay competitive.",
@@ -23,14 +12,6 @@ export const serviceMockedData: IServices[] = [
   },
   {
     id: 2,
-    iconUrl: {
-      fields: {
-        file: {
-          url: Hurricane,
-        },
-      },
-    },
-    iconAlt: "hurricane icon",
     title: "Transformational Change",
     introduction:
       "Technology alone is not sufficient to drive change.  Change needs to be embedded in the company's culture.",
@@ -40,14 +21,6 @@ export const serviceMockedData: IServices[] = [
   },
   {
     id: 3,
-    iconUrl: {
-      fields: {
-        file: {
-          url: People,
-        },
-      },
-    },
-    iconAlt: "people icon",
     title: "Effective Workshops",
     introduction:
       "Workshops address some of the top key issues faced when companies embark on project work.",

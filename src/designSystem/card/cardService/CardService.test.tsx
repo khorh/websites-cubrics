@@ -1,17 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import CardService from "./CardService";
-import FilePost from "../../../components/services/serviceImages/file-post.svg";
 
 const projectManagementData = {
   id: 1,
-  iconUrl: {
-    fields: {
-      file: {
-        url: FilePost,
-      },
-    },
-  },
-  iconAlt: "file post icon",
   title: "Project Management",
   introduction:
     "Companies are continuously transforming their organization to stay competitive.",
