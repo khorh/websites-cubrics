@@ -1,14 +1,23 @@
 import { render, screen } from "@testing-library/react";
 import CardService from "./CardService";
+import FilePost from "../../../components/services/serviceImages/file-post.svg";
 
 const projectManagementData = {
-  service_id: "project management",
-  service_icon: "file post",
-  service_title: "Project Management",
-  service_intro:
+  id: 1,
+  iconUrl: {
+    fields: {
+      file: {
+        url: FilePost,
+      },
+    },
+  },
+  iconAlt: "file post icon",
+  title: "Project Management",
+  introduction:
     "Companies are continuously transforming their organization to stay competitive.",
-  service_description:
+  description:
     "At Cubrics, our structured methodologies equip you to plan and execute your projects by leveraging our knowledge, tools and expertise gained from consulting with blue-chip brands.",
+  order: 1,
 };
 
 describe("card service", () => {
