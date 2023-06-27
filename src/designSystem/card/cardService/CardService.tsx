@@ -19,8 +19,8 @@ const CardService: FC<ICardService> = (props) => {
         aria-label="services-content-firstContainer"
       >
         <div
-          className={styles.firstContainer__iconTitle}
-          aria-label="services-content-firstContainer-iconTitle"
+          className={styles.firstContainer__title}
+          aria-label="services-content-firstContainer-title"
         >
           <Heading type={"h3"} colour={"base__light"}>
             {props.data.title}
