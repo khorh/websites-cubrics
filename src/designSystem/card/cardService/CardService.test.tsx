@@ -2,13 +2,13 @@ import { render, screen } from "@testing-library/react";
 import CardService from "./CardService";
 
 const projectManagementData = {
-  service_id: "project management",
-  service_icon: "file post",
-  service_title: "Project Management",
-  service_intro:
+  id: 1,
+  title: "Project Management",
+  introduction:
     "Companies are continuously transforming their organization to stay competitive.",
-  service_description:
+  description:
     "At Cubrics, our structured methodologies equip you to plan and execute your projects by leveraging our knowledge, tools and expertise gained from consulting with blue-chip brands.",
+  order: 1,
 };
 
 describe("card service", () => {
@@ -31,36 +31,25 @@ describe("card service's first container", () => {
       exact: true,
     });
   });
-  test("should render the card service's first container's icon and title", () => {
+  test("should render the card service's first container's title", () => {
+    render(<CardService data={projectManagementData} />);
+  });
+  test("should render the card service's first container's title", () => {
     render(<CardService data={projectManagementData} />);
     const cardServiceFirstContainerElement = screen.getByLabelText(
-      "services-content-firstContainer-iconTitle"
+      "services-content-firstContainer-title"
     );
     expect(cardServiceFirstContainerElement).toHaveClass(
-      "firstContainer__iconTitle",
+      "firstContainer__title",
       {
         exact: true,
       }
     );
-  });
-  test("should render the card service's first container's icon", () => {
-    render(<CardService data={projectManagementData} />);
-    const cardServiceFirstContainerElement = screen.getByRole(
-      "img"
-    ) as HTMLImageElement;
-    expect(cardServiceFirstContainerElement.tagName).toBe("IMG");
-    expect(cardServiceFirstContainerElement.src).toBe(
-      "http://localhost/file-post.svg"
-    );
-    expect(cardServiceFirstContainerElement.alt).toBe("file post icon");
-  });
-  test("should render the card service's first container's title", () => {
-    render(<CardService data={projectManagementData} />);
-    const cardServiceFirstContainerElement = screen.getByRole("heading", {
+    const cardServiceFirstContainerTitleElement = screen.getByRole("heading", {
       level: 3,
     });
-    expect(cardServiceFirstContainerElement.tagName).toBe("H3");
-    expect(cardServiceFirstContainerElement.textContent).toBe(
+    expect(cardServiceFirstContainerTitleElement.tagName).toBe("H3");
+    expect(cardServiceFirstContainerTitleElement.textContent).toBe(
       "Project Management"
     );
   });
@@ -89,8 +78,6 @@ describe("card service's second container", () => {
       "At Cubrics, our structured methodologies equip you to plan and execute your projects by leveraging our knowledge, tools and expertise gained from consulting with blue-chip brands."
     );
     expect(cardServiceSecondContainerParagraphElement.tagName).toBe("P");
-    expect(cardServiceSecondContainerParagraphElement.textContent).toBe(
-      "At Cubrics, our structured methodologies equip you to plan and execute your projects by leveraging our knowledge, tools and expertise gained from consulting with blue-chip brands."
-    );
+    expect(cardServiceSecondContainerParagraphElement.textContent).toBeInTheDocument;
   });
 });

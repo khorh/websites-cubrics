@@ -1,17 +1,15 @@
 import { FC } from "react";
-import { iconMockedImages } from "./Icon.mocked";
+import { iconListImages } from "./IconList";
 
 interface IIcon extends React.HTMLAttributes<HTMLImageElement> {
   name: string;
 }
 
 const Icon: FC<IIcon> = (props) => {
-  const filterIcons = iconMockedImages.filter(
-    (icon) => icon.icon_name === props.name
-  );
+  const filterIcons = iconListImages.filter((icon) => icon.name === props.name);
 
   const displayIcon = filterIcons.map((icon) => {
-    return <img src={icon.icon_url} alt={icon.icon_alt} key={icon.icon_name} />;
+    return <img src={icon.src} alt={icon.alt} key={icon.name} />;
   });
 
   return <>{displayIcon}</>;

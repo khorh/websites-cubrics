@@ -1,17 +1,11 @@
 import { FC } from "react";
 import styles from "./CardService.module.scss";
 import Heading from "../../heading/Heading";
-import Icon from "../../icon/Icon";
 import Text from "../../text/Text";
+import { IServices } from "../../../components/services/Services.type";
 
 export interface ICardService extends React.HTMLAttributes<HTMLDivElement> {
-  data: {
-    service_id: string;
-    service_icon: string;
-    service_title: string;
-    service_intro: string;
-    service_description: string;
-  };
+  data: IServices;
 }
 
 const CardService: FC<ICardService> = (props) => {
@@ -25,23 +19,22 @@ const CardService: FC<ICardService> = (props) => {
         aria-label="services-content-firstContainer"
       >
         <div
-          className={styles.firstContainer__iconTitle}
-          aria-label="services-content-firstContainer-iconTitle"
+          className={styles.firstContainer__title}
+          aria-label="services-content-firstContainer-title"
         >
-          <Icon name={props.data.service_icon} />
           <Heading type={"h3"} colour={"base__light"}>
-            {props.data.service_title}
+            {props.data.title}
           </Heading>
         </div>
         <Text type={"p2"} colour={"base__light"}>
-          {props.data.service_intro}
+          {props.data.introduction}
         </Text>
       </div>
       <div
         className={styles.secondContainer}
         aria-label="services-content-secondContainer"
       >
-        <Text type={"p2"}>{props.data.service_description}</Text>
+        <Text type={"p2"}>{props.data.description}</Text>
       </div>
     </div>
   );
