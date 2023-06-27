@@ -1,19 +1,17 @@
 import { FC } from "react";
 import styles from "./CardIndustryGroup.module.scss";
 import CardIndustry from "../cardIndustry/CardIndustry";
+import { IIndustry } from "../../../components/industries/Industries.type";
 
-interface ICardIndustryGroup extends React.HTMLAttributes<HTMLDivElement> {
-  data: {
-    industries_id: string;
-    industries_title: string;
-    industries_image: string;
-    industries_alt: string;
-  }[];
+interface ICardIndustryGroup extends React.HTMLAttributes<HTMLTextAreaElement> {
+  data: IIndustry[];
 }
 
 const CardIndustryGroup: FC<ICardIndustryGroup> = (props) => {
-  const displayIndustriesData = props.data.map((industry) => {
-    return <CardIndustry data={industry} key={industry.industries_id} />;
+  const sortIndustriesData = props.data.sort((a, b) => a.order - b.order);
+
+  const displayIndustriesData = sortIndustriesData.map((item) => {
+    return <CardIndustry data={item} key={item.id} />;
   });
 
   return (

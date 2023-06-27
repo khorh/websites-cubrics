@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import Industries from "./Industries";
 
 describe("industries", () => {
@@ -20,12 +20,14 @@ describe("industries", () => {
     expect(industriesTitleHeadingElement.tagName).toBe("H2");
     expect(industriesTitleHeadingElement.textContent).toBe("INDUSTRIES");
   });
-  test("should render the industries' content", () => {
+  test("should render the industries' content", async () => {
     render(<Industries />);
-    const industriesContentElement =
-      screen.getByLabelText("industries-content");
-    expect(industriesContentElement.textContent).toBe(
-      "ConsumerEnergyHealthcareTelecoms"
-    );
+    await waitFor(() => {
+      const industriesContentElement =
+        screen.getByLabelText("industries-content");
+      expect(industriesContentElement.textContent).toBe(
+        "ConsumerEnergyHealthcareTelecoms"
+      );
+    });
   });
 });
