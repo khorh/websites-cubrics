@@ -1,18 +1,10 @@
 import { FC } from "react";
 import styles from "./NavigationLink.module.scss";
-
-interface INavigationLink extends React.HTMLAttributes<HTMLAnchorElement> {
-  name: string;
-  destination: string;
-}
+import { INavigationLink } from "./NavigationLink.type";
 
 const NavigationLink: FC<INavigationLink> = (props) => {
   return (
-    <a
-      className={styles.common}
-      href={props.destination}
-      role={"menuitem"}
-    >
+    <a className={styles.common} href={props.destination} role={"menuitem"}>
       {props.name}
     </a>
   );
