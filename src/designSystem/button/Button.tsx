@@ -1,9 +1,6 @@
 import { FC } from "react";
 import styles from "./Button.module.scss";
-
-interface IButton extends React.HTMLAttributes<HTMLButtonElement> {
-  email?: string;
-}
+import { IButton } from "./Button.type";
 
 const Button: FC<IButton> = (props) => {
   return (
