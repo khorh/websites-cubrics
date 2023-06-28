@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { iconListImages } from "./IconList";
-
-interface IIcon extends React.HTMLAttributes<HTMLImageElement> {
-  name: string;
-}
+import { IIcon } from "./Icon.type";
+import { iconList } from "./IconList";
+import { IIconList } from "./IconList.type";
 
 const Icon: FC<IIcon> = (props) => {
-  const filterIcons = iconListImages.filter((icon) => icon.name === props.name);
+  const filterIcons = iconList.filter(
+    (icon: IIconList) => icon.name === props.name
+  );
 
-  const displayIcon = filterIcons.map((icon) => {
+  const displayIcon = filterIcons.map((icon: IIconList) => {
     return <img src={icon.src} alt={icon.alt} key={icon.name} />;
   });
 

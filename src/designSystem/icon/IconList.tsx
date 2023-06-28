@@ -1,12 +1,7 @@
+import { IIconList } from "./IconList.type";
 import Menu from "./iconImages/list.svg";
 
-interface IIconImages {
-  name: string;
-  src: string;
-  alt: string;
-}
-
-export const iconListImages: IIconImages[] = [
+export const iconList: IIconList[] = [
   {
     name: "menu",
     src: Menu,
