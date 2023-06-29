@@ -2,11 +2,7 @@ import { FC } from "react";
 import styles from "./CardAbout.module.scss";
 import Heading from "../../heading/Heading";
 import Text from "../../text/Text";
-import { IAbout } from "../../../components/about/About.type";
-
-interface ICardAbout extends React.HTMLAttributes<HTMLDivElement> {
-  data: IAbout;
-}
+import { ICardAbout } from "./CardAbout.type";
 
 const CardAbout: FC<ICardAbout> = (props) => {
   return (
