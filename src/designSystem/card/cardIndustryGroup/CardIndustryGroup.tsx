@@ -1,11 +1,7 @@
 import { FC } from "react";
 import styles from "./CardIndustryGroup.module.scss";
 import CardIndustry from "../cardIndustry/CardIndustry";
-import { IIndustry } from "../../../components/industries/Industries.type";
-
-interface ICardIndustryGroup extends React.HTMLAttributes<HTMLTextAreaElement> {
-  data: IIndustry[];
-}
+import { ICardIndustryGroup } from "./CardIndustryGroup.type";
 
 const CardIndustryGroup: FC<ICardIndustryGroup> = (props) => {
   const sortIndustriesData = props.data.sort((a, b) => a.order - b.order);

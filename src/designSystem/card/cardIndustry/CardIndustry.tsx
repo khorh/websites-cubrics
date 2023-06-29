@@ -1,11 +1,7 @@
 import { FC } from "react";
 import styles from "./CardIndustry.module.scss";
 import Heading from "../../heading/Heading";
-import { IIndustry } from "../../../components/industries/Industries.type";
-
-interface ICardIndustry extends React.HTMLAttributes<HTMLDivElement> {
-  data: IIndustry;
-}
+import { ICardIndustry } from "./CardIndustry.type";
 
 const CardIndustry: FC<ICardIndustry> = (props) => {
   return (
