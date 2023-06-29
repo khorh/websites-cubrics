@@ -1,10 +1,6 @@
 import { FC } from "react";
 import styles from "./Text.module.scss";
-
-interface IText extends React.HTMLAttributes<HTMLParagraphElement> {
-  type: "p1" | "p2" | "footer";
-  colour?: "base__dark" | "base__light";
-}
+import { IText } from "./Text.type";
 
 const Text: FC<IText> = (props) => {
   // defaults

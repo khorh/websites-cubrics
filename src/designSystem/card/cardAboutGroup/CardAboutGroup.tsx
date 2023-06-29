@@ -1,11 +1,7 @@
 import { FC } from "react";
 import styles from "./CardAboutGroup.module.scss";
 import CardAbout from "../cardAbout/CardAbout";
-import { IAbout } from "../../../components/about/About.type";
-
-interface ICardAboutGroup extends React.HTMLAttributes<HTMLTextAreaElement> {
-  data: IAbout[];
-}
+import { ICardAboutGroup } from "./CardAboutGroup.type";
 
 const CardAboutGroup: FC<ICardAboutGroup> = (props) => {
   const sortAboutData = props.data.sort((a, b) => a.order - b.order);

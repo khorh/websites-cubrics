@@ -1,11 +1,7 @@
 import { FC } from "react";
 import styles from "./CardServiceGroup.module.scss";
 import CardService from "../cardService/CardService";
-import { IServices } from "../../../components/services/Services.type";
-
-interface ICardServiceGroup extends React.HTMLAttributes<HTMLDivElement> {
-  data: IServices[];
-}
+import { ICardServiceGroup } from "./CardServiceGroup.type";
 
 const CardServiceGroup: FC<ICardServiceGroup> = (props) => {
   const sortServicesData = props.data.sort((a, b) => a.order - b.order);

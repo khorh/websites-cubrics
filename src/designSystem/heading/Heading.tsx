@@ -1,10 +1,6 @@
 import { FC } from "react";
 import styles from "./Heading.module.scss";
-
-interface IHeading extends React.HTMLAttributes<HTMLHeadingElement> {
-  type: "h1" | "h2" | "h3";
-  colour?: "base__dark" | "primary__dark" | "base__light";
-}
+import { IHeading } from "./Heading.type";
 
 const Heading: FC<IHeading> = (props) => {
   // defaults

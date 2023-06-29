@@ -2,11 +2,7 @@ import { FC } from "react";
 import styles from "./CardService.module.scss";
 import Heading from "../../heading/Heading";
 import Text from "../../text/Text";
-import { IServices } from "../../../components/services/Services.type";
-
-export interface ICardService extends React.HTMLAttributes<HTMLDivElement> {
-  data: IServices;
-}
+import { ICardService } from "./CardService.type";
 
 const CardService: FC<ICardService> = (props) => {
   return (

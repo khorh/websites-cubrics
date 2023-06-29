@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import NavigationBar from "./NavigationBar";
+import NavigationBar from "./Navigation";
 
 describe("navigation bar", () => {
   test("should render the navigation bar", () => {

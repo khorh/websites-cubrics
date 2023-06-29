@@ -3,16 +3,11 @@ import styles from "./Header.module.scss";
 import Button from "../../designSystem/button/Button";
 import Heading from "../../designSystem/heading/Heading";
 import Text from "../../designSystem/text/Text";
+import { IHeader } from "./Header.type";
 import { client } from "../../useContentful";
 
-interface IHeaderResponse {
-  title: string;
-  subTitle: string;
-  email: string;
-}
-
 const Header: FC = () => {
-  const [header, setHeader] = useState<IHeaderResponse[]>([]);
+  const [header, setHeader] = useState<IHeader[]>([]);
 
   const getHeader = async () => {
     try {
@@ -32,7 +27,7 @@ const Header: FC = () => {
     getHeader().then((response: any) => setHeader(response));
   });
 
-  const displayHeader = header.map((item: IHeaderResponse) => {
+  const displayHeader = header.map((item: IHeader) => {
     return (
       <div
         className={styles.content}
