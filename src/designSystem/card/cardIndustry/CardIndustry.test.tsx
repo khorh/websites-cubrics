@@ -23,7 +23,9 @@ describe("card industry", () => {
       const cardIndustryImageElement = screen.getByRole(
         "img"
       ) as HTMLImageElement;
-      expect(cardIndustryImageElement.src).toBe(`http://localhost/${item.image}`);
+      expect(cardIndustryImageElement.src).toBe(
+        `http://localhost/${item.image.fields.file.url}`
+      );
       expect(cardIndustryImageElement.alt).toBe(`${item.alt}`);
     });
     test("should render the card industry's title", () => {
