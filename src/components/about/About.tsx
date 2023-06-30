@@ -2,10 +2,13 @@ import { FC, useEffect, useState } from "react";
 import styles from "./About.module.scss";
 import CardAboutGroup from "../../designSystem/card/cardAboutGroup/CardAboutGroup";
 import Heading from "../../designSystem/heading/Heading";
+import Text from "../../designSystem/text/Text";
 import { IAbout } from "./About.type";
 import { client } from "../../useContentful";
 
 const About: FC = () => {
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [about, setAbout] = useState<IAbout[]>([]);
 
   const getAbout = async () => {
@@ -21,11 +24,17 @@ const About: FC = () => {
       return sanitizedEntries;
     } catch (error) {
       console.log(`Error fetching about ${error}`);
+      setErrorMessage("Data unavailable");
     }
   };
 
   useEffect(() => {
-    getAbout().then((response: any) => setAbout(response));
+    getAbout().then((response: any) => {
+      if (response) {
+        setIsSuccess(true);
+        setAbout(response);
+      }
+    });
   });
 
   return (
@@ -39,7 +48,13 @@ const About: FC = () => {
           ABOUT
         </Heading>
       </article>
-      <CardAboutGroup data={about} />
+      {isSuccess ? (
+        <CardAboutGroup data={about} />
+      ) : (
+        <article className={styles.errorMessage}>
+          <Text type={"p2"}>{errorMessage}</Text>
+        </article>
+      )}
     </section>
   );
 };
