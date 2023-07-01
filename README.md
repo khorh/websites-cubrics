@@ -144,3 +144,5 @@ https://www.w3.org/TR/html-aria/#docconformance
 cypress is used for e2e testing. See https://www.cypress.io/ for more information.
 
 At present e2e testing is completed on the navigation and considers responsive design. The contact button in the header section will be completed in due course as it requires setting up a fake email client.
+
+Note adding `data-testid` for quering is useful for variations of the same design system component.
