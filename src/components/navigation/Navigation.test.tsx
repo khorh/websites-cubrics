@@ -49,7 +49,7 @@ describe("navigation bar with the menu icon", () => {
 describe("navigation bar with the links", () => {
   test("should render the navigation bar with navigation links", () => {
     render(<NavigationBar />);
-    const navigationLinksElement = screen.getByLabelText("horizontal links");
+    const navigationLinksElement = screen.getByLabelText("horizontal links container");
     expect(navigationLinksElement).toHaveClass("links__horizontal__container", {
       exact: true,
     });
