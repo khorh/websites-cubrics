@@ -45,33 +45,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Unit testing
-
-testing-library/react is used for unit testing. See https://testing-library.com/ for more information.
-
-### Queries
-
-Testing Library has created their guiding principles. See https://testing-library.com/docs/guiding-principles for more information.
-
-This is the order of preference for quering:
-
-- getByRole
-- getByLabelText
-- getByPlaceholderText
-- getByText
-- getByDisplayValue
-- getByAltText
-- getByTitle
-- getByTestId
-
-Note adding `data-testid` for quering is the least preferred.
-
-"In the spirit of the guiding principles, it is recommended to use this only after the other queries don't work for your use case. Using `data-testid` attributes do not resemble how your software is used and should be avoided if possible."
-
-Source: https://testing-library.com/docs/queries/bytestid/
-
-https://www.w3.org/TR/html-aria/#docconformance
-
 ## Web Accessibility
 
 ### Anchor
@@ -138,3 +111,36 @@ https://www.w3.org/TR/html-aria/#docconformance
 - `<section>` tag has an implicit role called "region". "region" is allowed but not recommended.
 - For this website, section is used frequently so aria labels have been added. Therefore for unit testing, use getByLabelText.
 - For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/section_role
+
+## Unit testing
+
+testing-library/react is used for unit testing. See https://testing-library.com/ for more information.
+
+### Queries
+
+Testing Library has created their guiding principles. See https://testing-library.com/docs/guiding-principles for more information.
+
+This is the order of preference for quering:
+
+- getByRole
+- getByLabelText
+- getByPlaceholderText
+- getByText
+- getByDisplayValue
+- getByAltText
+- getByTitle
+- getByTestId
+
+Note adding `data-testid` for quering is the least preferred.
+
+"In the spirit of the guiding principles, it is recommended to use this only after the other queries don't work for your use case. Using `data-testid` attributes do not resemble how your software is used and should be avoided if possible."
+
+Source: https://testing-library.com/docs/queries/bytestid/
+
+https://www.w3.org/TR/html-aria/#docconformance
+
+## End-to-end (E2E) testing
+
+cypress is used for e2e testing. See https://www.cypress.io/ for more information.
+
+At present e2e testing is completed on the navigation and considers responsive design. The contact button in the header section will be completed in due course as it requires setting up a fake email client.
