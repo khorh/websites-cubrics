@@ -1,25 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e0848f42.css",
-    "main.js": "/static/js/main.ccfd1413.js",
+    "main.css": "/static/css/main.ad01aba3.css",
+    "main.js": "/static/js/main.f95bd4ad.js",
     "static/js/787.40c00e61.chunk.js": "/static/js/787.40c00e61.chunk.js",
     "static/media/world.jpg": "/static/media/world.ce1bc343d487e0d73b1d.jpg",
-    "static/media/consumer.jpg": "/static/media/consumer.e0a9314866363cc32f9b.jpg",
-    "static/media/telecoms.jpg": "/static/media/telecoms.a47643514c46b0ae89f8.jpg",
-    "static/media/energy.jpg": "/static/media/energy.accac8fe68cfa9be4520.jpg",
-    "static/media/healthcare.jpg": "/static/media/healthcare.82f0e45fe2c82a3fd323.jpg",
     "static/media/logo-cubrics.svg": "/static/media/logo-cubrics.5782ad3d981626b216336728bce9e4f2.svg",
-    "static/media/people.svg": "/static/media/people.d01d285b66474cfe8aa2d13acd868af6.svg",
-    "static/media/hurricane.svg": "/static/media/hurricane.e086286dcde47bcfa9344dfbe56891c1.svg",
-    "static/media/file-post.svg": "/static/media/file-post.3017d34938e11d3edcbd32576b48f544.svg",
     "static/media/list.svg": "/static/media/list.add990f1d413ba093c5a1bb9a02b371a.svg",
     "index.html": "/index.html",
-    "main.e0848f42.css.map": "/static/css/main.e0848f42.css.map",
-    "main.ccfd1413.js.map": "/static/js/main.ccfd1413.js.map",
+    "main.ad01aba3.css.map": "/static/css/main.ad01aba3.css.map",
+    "main.f95bd4ad.js.map": "/static/js/main.f95bd4ad.js.map",
     "787.40c00e61.chunk.js.map": "/static/js/787.40c00e61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0848f42.css",
-    "static/js/main.ccfd1413.js"
+    "static/css/main.ad01aba3.css",
+    "static/js/main.f95bd4ad.js"
   ]
 }
