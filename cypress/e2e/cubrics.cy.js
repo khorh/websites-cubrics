@@ -64,6 +64,3 @@ describe("navigation", () => {
     });
   });
 });
-
-// Notes
-// Not testing contact button in header as this requires setting an external email client
