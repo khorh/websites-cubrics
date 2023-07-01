@@ -3,7 +3,13 @@ import NavigationLink from "./NavigationLink";
 
 describe("navigation link", () => {
   test("should render a navigation link", () => {
-    render(<NavigationLink name={"Link"} destination={"#link"} />);
+    render(
+      <NavigationLink
+        name={"Link"}
+        destination={"#link"}
+        dataTestId={"navigation-link"}
+      />
+    );
     const navigationLinkElement = screen.getByRole("menuitem");
     expect(navigationLinkElement.tagName).toBe("A");
     expect(navigationLinkElement).toHaveClass("common", { exact: true });
