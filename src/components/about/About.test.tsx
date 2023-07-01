@@ -3,7 +3,7 @@ import About from "./About";
 import { client } from "../../useContentful";
 import { IAbout } from "./About.type";
 
-jest.mock("../../useContentful");
+// jest.mock("../../useContentful");
 
 describe("about", () => {
   test("should render the about section", () => {
