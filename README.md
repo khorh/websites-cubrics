@@ -139,6 +139,12 @@ Source: https://testing-library.com/docs/queries/bytestid/
 
 https://www.w3.org/TR/html-aria/#docconformance
 
+### Commands
+
+`npm run test` - runs the tests
+`npm run test About.test.tsx` - runs a specific test file
+`npm run test:coverage` - generates the coverage report
+
 ## End-to-end (E2E) testing
 
 cypress is used for e2e testing. See https://www.cypress.io/ for more information.
@@ -146,3 +152,11 @@ cypress is used for e2e testing. See https://www.cypress.io/ for more informatio
 At present e2e testing is completed on the navigation and considers responsive design. The contact button in the header section will be completed in due course as it requires setting up a fake email client.
 
 Note adding `data-testid` for quering is useful for variations of the same design system component.
+
+### Commands
+
+`npx cypress open` - open the desktop app and run the tests
+
+## Production
+
+The project uses github pages for hosting.
