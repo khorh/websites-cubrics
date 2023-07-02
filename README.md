@@ -143,10 +143,10 @@ Source: https://testing-library.com/docs/queries/bytestid/
 
 https://www.w3.org/TR/html-aria/#docconformance
 
-### Commands
-
 ### `npm run test` - runs the tests
+
 ### `npm run test About.test.tsx` - runs a specific test file
+
 ### `npm run test:coverage` - generates the coverage report
 
 ## 5.2 e2e testing
@@ -157,9 +157,7 @@ At present e2e testing is completed on the navigation and considers responsive d
 
 Note adding `data-testid` for quering is useful for variations of the same design system component.
 
-### Commands
-
-### `npx cypress open` - open the desktop app and run the tests
+### `npx cypress open` - opens the desktop app and run the tests
 
 ## 6. Production
 
