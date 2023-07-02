@@ -161,7 +161,7 @@ At present e2e testing is completed on the navigation and considers responsive d
 
 Note adding `data-testid` for quering is useful for variations of the same design system component.
 
-## 6. Production
+# 6. Production
 
 ### `npm run deploy`
 
