@@ -1,6 +1,35 @@
-# Getting Started with Create React App
+# Cubrics
+
+Cubrics is a business transformation consultancy.
+
+## Project's objective
+
+To develop an easy to manage website for the client based on the high fidelity wireframes in Figma.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Tech stack
+
+- HTML/HTML5
+
+### Interactivity
+
+- Javascript
+- React/Typescript
+
+### Styling
+
+- CSS/CSS3
+- SASS
+
+### Testing
+
+- Testing library for unit testing
+- Cypress for end-to-end (e2e) testing
+
+### Content management
+
+- Contenful API
 
 ## Available Scripts
 
