@@ -114,9 +114,9 @@ This section aims to provide information on web accessibility considerations to 
 
 # 5. Testing
 
-Both unit and end-to-end (e2e) testing have been implemented in this project.
+This section provides information on the unit and end-to-end (e2e) testing that have been implemented in this project.
 
-## 4.1 Unit testing
+## 5.1 Unit testing
 
 testing-library/react is used for unit testing. See https://testing-library.com/ for more information.
 
@@ -145,11 +145,11 @@ https://www.w3.org/TR/html-aria/#docconformance
 
 ### Commands
 
-`npm run test` - runs the tests
-`npm run test About.test.tsx` - runs a specific test file
-`npm run test:coverage` - generates the coverage report
+### `npm run test` - runs the tests
+### `npm run test About.test.tsx` - runs a specific test file
+### `npm run test:coverage` - generates the coverage report
 
-## 4.2 e2e testing
+## 5.2 e2e testing
 
 cypress is used for e2e testing. See https://www.cypress.io/ for more information.
 
@@ -159,7 +159,7 @@ Note adding `data-testid` for quering is useful for variations of the same desig
 
 ### Commands
 
-`npx cypress open` - open the desktop app and run the tests
+### `npx cypress open` - open the desktop app and run the tests
 
 ## 6. Production
 
@@ -191,4 +191,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # 7. Hosting
 
-The project uses github pages for hosting on the client's account.
+The project uses github pages for hosting on the client's account by forking this repository and syncing it when there are changes to requirements.
