@@ -1,12 +1,41 @@
-# Getting Started with Create React App
+# Cubrics
+
+Cubrics is a business transformation consultancy. To visit the live website, please go to https://www.cubrics.co.uk
+
+# 1. Project's objective
+
+To develop an easy to manage website for the client based on the high fidelity wireframes in Figma.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# 2. Tech stack
+
+- HTML/HTML5
+
+### Interactivity
+
+- Javascript
+- React/Typescript
+
+### Styling
+
+- CSS/CSS3
+- SASS
+
+### Testing
+
+- Testing Library for unit testing
+- Cypress for end-to-end (e2e) testing
+
+### Content management
+
+- Contenful API
+
+# 3. Start this project
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` or `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,38 +43,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+# 4. Web Accessibility
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-## Web Accessibility
+This section aims to provide information on web accessibility considerations to improve the experience for those with visual impairements.
 
 ### Anchor
 
@@ -112,9 +112,19 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - For this website, section is used frequently so aria labels have been added. Therefore for unit testing, use getByLabelText.
 - For more information, see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/section_role
 
-## Unit testing
+# 5. Testing
+
+This section provides information on the unit and end-to-end (e2e) testing that have been implemented in this project.
+
+## 5.1 Unit testing
 
 testing-library/react is used for unit testing. See https://testing-library.com/ for more information.
+
+### `npm run test` - runs the tests
+
+### `npm run test About.test.tsx` - runs a specific test file
+
+### `npm run test:coverage` - generates the coverage report
 
 ### Queries
 
@@ -135,28 +145,44 @@ Note adding `data-testid` for quering is the least preferred.
 
 "In the spirit of the guiding principles, it is recommended to use this only after the other queries don't work for your use case. Using `data-testid` attributes do not resemble how your software is used and should be avoided if possible."
 
-Source: https://testing-library.com/docs/queries/bytestid/
+Sources:
+
+https://testing-library.com/docs/queries/bytestid/
 
 https://www.w3.org/TR/html-aria/#docconformance
 
-### Commands
-
-`npm run test` - runs the tests
-`npm run test About.test.tsx` - runs a specific test file
-`npm run test:coverage` - generates the coverage report
-
-## End-to-end (E2E) testing
+## 5.2 e2e testing
 
 cypress is used for e2e testing. See https://www.cypress.io/ for more information.
+
+### `npx cypress open` - opens the desktop app and run the tests
 
 At present e2e testing is completed on the navigation and considers responsive design. The contact button in the header section will be completed in due course as it requires setting up a fake email client.
 
 Note adding `data-testid` for quering is useful for variations of the same design system component.
 
-### Commands
+# 6. Production
 
-`npx cypress open` - open the desktop app and run the tests
+### `npm run deploy`
 
-## Production
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The project uses github pages for hosting.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+# 7. Hosting
+
+The project uses github pages for hosting on the client's account by forking this repository and syncing it when there are changes to requirements.
