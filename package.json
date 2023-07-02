@@ -25,7 +25,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
-    "test:coverage": "CI=true npm test -- --env=jsdom --coverage --collectCoverageFrom=!src/**/*.stories.tsx --collectCoverageFrom=!src/**/*.png --collectCoverageFrom=!src/**/*.svg --collectCoverageFrom=!src/**/*.type.tsx",
+    "test:coverage": "CI=true npm test -- --env=jsdom --coverage --collectCoverageFrom=!src/**/*.stories.ts --collectCoverageFrom=!src/**/*.png --collectCoverageFrom=!src/**/*.svg --collectCoverageFrom=!src/**/*.type.tsx",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
