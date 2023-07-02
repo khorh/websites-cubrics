@@ -120,6 +120,12 @@ This section provides information on the unit and end-to-end (e2e) testing that 
 
 testing-library/react is used for unit testing. See https://testing-library.com/ for more information.
 
+### `npm run test` - runs the tests
+
+### `npm run test About.test.tsx` - runs a specific test file
+
+### `npm run test:coverage` - generates the coverage report
+
 ### Queries
 
 Testing Library has created their guiding principles. See https://testing-library.com/docs/guiding-principles for more information.
@@ -139,25 +145,21 @@ Note adding `data-testid` for quering is the least preferred.
 
 "In the spirit of the guiding principles, it is recommended to use this only after the other queries don't work for your use case. Using `data-testid` attributes do not resemble how your software is used and should be avoided if possible."
 
-Source: https://testing-library.com/docs/queries/bytestid/
+Sources:
+
+https://testing-library.com/docs/queries/bytestid/
 
 https://www.w3.org/TR/html-aria/#docconformance
-
-### `npm run test` - runs the tests
-
-### `npm run test About.test.tsx` - runs a specific test file
-
-### `npm run test:coverage` - generates the coverage report
 
 ## 5.2 e2e testing
 
 cypress is used for e2e testing. See https://www.cypress.io/ for more information.
 
+### `npx cypress open` - opens the desktop app and run the tests
+
 At present e2e testing is completed on the navigation and considers responsive design. The contact button in the header section will be completed in due course as it requires setting up a fake email client.
 
 Note adding `data-testid` for quering is useful for variations of the same design system component.
-
-### `npx cypress open` - opens the desktop app and run the tests
 
 ## 6. Production
 
