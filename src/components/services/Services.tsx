@@ -26,7 +26,7 @@ const Services: FC = () => {
 
   useEffect(() => {
     getServices().then((response: any) => setServices(response));
-  });
+  }, []);
 
   return (
     <section

@@ -24,7 +24,7 @@ const Purpose: FC = () => {
 
   useEffect(() => {
     getPurpose().then((response: any) => setPurpose(response));
-  });
+  }, []);
 
   const displayPurposeContent = purpose.map((item: IPurpose) => {
     return (

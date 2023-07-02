@@ -26,7 +26,7 @@ const About: FC = () => {
 
   useEffect(() => {
     getAbout().then((response: any) => setAbout(response));
-  });
+  }, []);
 
   return (
     <section

@@ -23,7 +23,7 @@ const Footer: FC = () => {
 
   useEffect(() => {
     getFooter().then((response: any) => setFooter(response));
-  });
+  }, []);
 
   const displayFooterContent = footer.map((item: IFooter) => {
     return (
