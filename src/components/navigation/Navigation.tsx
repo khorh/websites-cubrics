@@ -16,6 +16,7 @@ const NavigationBar: FC = () => {
           key={link.name}
           name={link.name}
           destination={link.destination}
+          dataTestId={link.dataTestId}
         />
       );
     }
@@ -33,6 +34,7 @@ const NavigationBar: FC = () => {
         onClick={toggleVerticalLinks}
         role="button"
         aria-label="vertical links container"
+        data-testid="vertical-links-container"
       >
         <Icon name={"menu"} />
         {verticalLinks && (
@@ -48,7 +50,8 @@ const NavigationBar: FC = () => {
       <div
         className={styles.links__horizontal__container}
         role="menubar"
-        aria-label="horizontal links"
+        aria-label="horizontal links container"
+        data-testid="horizontal-links-container"
       >
         <div className={styles.links__horizontal}>{displayNavigationLinks}</div>
       </div>
