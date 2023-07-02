@@ -25,13 +25,16 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
-    "test:coverage": "CI=true npm test -- --env=jsdom --coverage --collectCoverageFrom=!src/**/*.stories.tsx --collectCoverageFrom=!src/**/*.png --collectCoverageFrom=!src/**/*.svg --collectCoverageFrom=!src/**/*.type.tsx",
-    "eject": "react-scripts eject"
+    "test:coverage": "CI=true npm test -- --env=jsdom --coverage --collectCoverageFrom=!src/**/*.stories.ts --collectCoverageFrom=!src/**/*.png --collectCoverageFrom=!src/**/*.svg --collectCoverageFrom=!src/**/*.type.tsx",
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -47,7 +50,20 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/preset-create-react-app": "^7.0.24",
+    "@storybook/react": "^7.0.24",
+    "@storybook/react-webpack5": "^7.0.24",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "cypress": "^12.16.0",
-    "gh-pages": "^5.0.0"
+    "eslint-plugin-storybook": "^0.6.12",
+    "gh-pages": "^5.0.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.24",
+    "webpack": "^5.88.1"
   }
 }
