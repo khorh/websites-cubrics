@@ -13,7 +13,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Consumer: Story = {
+export const Example: Story = {
   args: {
     data: {
       id: 1,
