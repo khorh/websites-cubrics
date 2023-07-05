@@ -35,7 +35,7 @@ const About: FC = () => {
         setAbout(response);
       }
     });
-  });
+  }, []);
 
   return (
     <section

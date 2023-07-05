@@ -22,6 +22,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - CSS/CSS3
 - SASS
 
+### Design system visualisation
+
+- Storybook.js
+
 ### Testing
 
 - Testing Library for unit testing
@@ -35,7 +39,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start` or `npm run start`
+### `npm start` to view the frontend development
+
+### `npm run storybook` to view the design system
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

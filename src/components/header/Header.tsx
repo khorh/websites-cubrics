@@ -25,7 +25,7 @@ const Header: FC = () => {
 
   useEffect(() => {
     getHeader().then((response: any) => setHeader(response));
-  });
+  }, []);
 
   const displayHeader = header.map((item: IHeader) => {
     return (

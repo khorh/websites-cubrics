@@ -26,7 +26,7 @@ const Industries: FC = () => {
 
   useEffect(() => {
     getIndustries().then((response: any) => setIndustries(response));
-  });
+  }, []);
 
   return (
     <section

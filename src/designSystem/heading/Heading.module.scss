@@ -2,13 +2,14 @@
 
 .common {
   margin: 0;
+  font-family: $font-family-primary;
   font-weight: 600;
   line-height: 150%;
 }
 
 // type
 h1 {
-  font-size: 32px;
+  font-size: 40px;
   @include breakpoint-xs {
     font-size: 48px;
   }
