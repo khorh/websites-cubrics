@@ -2,8 +2,22 @@ import { act, render, screen, waitFor } from "@testing-library/react";
 import About from "./About";
 import { client } from "../../useContentful";
 import { IAbout } from "./About.type";
+import getAbout from "./About.api";
 
-// jest.mock("../../useContentful");
+const aboutMockedData: IAbout[] = [
+  {
+    id: 1,
+    title: "Purpose",
+    description:
+      "Our purpose is to realise our client's business value by delivering high quality results, at a faster pace and lowering your transformation costs.",
+    order: 1,
+  },
+];
+
+
+jest.mock("./About.api", () => ({
+  getAbout: jest.fn(() => Promise.resolve(aboutMockedData)),
+}));
 
 describe("about", () => {
   test("should render the about section", () => {
@@ -31,19 +45,13 @@ describe("about", () => {
   //     );
   //   });
   // });
-  // test("test", async () => {
-  //   const items: IAbout[] = [
-  //     {
-  //       id: 1,
-  //       title: "Purpose",
-  //       description:
-  //         "Our purpose is to realise our client's business value by delivering high quality results, at a faster pace and lowering your transformation costs.",
-  //       order: 1,
-  //     },
-  //   ];
-  //   const response = { data: items };
-  //   (client.getEntries as jest.Mock).mockResolvedValue(response);
-
-  //   return getAbout().then((data: any) => expect(data).toEqual(items));
-  // });
+  test("test", async () => {
+    await act(() => {
+      render(<About />);
+      waitFor(() => {
+        const purposeElement = screen.getByText("Purpose");
+        expect(purposeElement).toBeInTheDocument();
+      });
+    });
+  });
 });

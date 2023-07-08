@@ -4,29 +4,30 @@ import CardAboutGroup from "../../designSystem/card/cardAboutGroup/CardAboutGrou
 import Heading from "../../designSystem/heading/Heading";
 import Text from "../../designSystem/text/Text";
 import { IAbout } from "./About.type";
-import { client } from "../../useContentful";
+// import { client } from "../../useContentful";
+import getAbout from "./About.api";
 
 const About: FC = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [about, setAbout] = useState<IAbout[]>([]);
 
-  const getAbout = async () => {
-    try {
-      const entries = await client.getEntries({
-        content_type: "about",
-      });
-      const sanitizedEntries = entries.items.map((item) => {
-        return {
-          ...item.fields,
-        };
-      });
-      return sanitizedEntries;
-    } catch (error) {
-      console.log(`Error fetching about ${error}`);
-      setErrorMessage("Data unavailable");
-    }
-  };
+  // const getAbout = async () => {
+  //   try {
+  //     const entries = await client.getEntries({
+  //       content_type: "about",
+  //     });
+  //     const sanitizedEntries = entries.items.map((item) => {
+  //       return {
+  //         ...item.fields,
+  //       };
+  //     });
+  //     return sanitizedEntries;
+  //   } catch (error) {
+  //     console.log(`Error fetching about ${error}`);
+  //     setErrorMessage("Data unavailable");
+  //   }
+  // };
 
   useEffect(() => {
     getAbout().then((response: any) => {
