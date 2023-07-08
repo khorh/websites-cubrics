@@ -29,3 +29,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.errorMessage {
+  grid-column: 2 / -2;
+}
